@@ -1,0 +1,155 @@
+\hypertarget{group___ina219}{}\doxysection{Interface-\/com-\/\+Ina219}
+\label{group___ina219}\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+
+
+rotinas-\/funcoes de tratamento da leitura de tensao e corrente do Ina219  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___ina219_gae284c923da4b61b37d40c37998cb2f22}{inicia\+I\+N\+A219}} ()
+\begin{DoxyCompactList}\small\item\em inicia chip sensores de tensao e corrente ina219 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___ina219_ga03a4f248036090faab4a941dcfef0efb}{le\+I\+N\+A219}} ()
+\begin{DoxyCompactList}\small\item\em le sensores-\/entradas analogicas de tensao e corrente do ina219 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___ina219_gac4c9a1b763c356be1a2c58ee16d4206c}{dbg\+Mostra\+Ina219}} (float voltagem\+Circuito, float voltagem\+Shunt, float voltagem\+Entrada, float corrente\+\_\+mA, float potencia\+\_\+mW, float \mbox{\hyperlink{group___ina219_ga048baae7540f2d3f654db2e9d1024f27}{media\+Volts}}, float \mbox{\hyperlink{group___ina219_gabfc2ba30a59fa1ceb41a60667ebc5099}{media\+Amperes}})
+\begin{DoxyCompactList}\small\item\em Debug mostra valores ina 219 (mA, mV, mW, media Volt, media A) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___ina219_ga69393b86406e49dbacfbabd283877495}\label{group___ina219_ga69393b86406e49dbacfbabd283877495}} 
+\mbox{\hyperlink{class_adafruit___i_n_a219}{Adafruit\+\_\+\+I\+N\+A219}} \mbox{\hyperlink{group___ina219_ga69393b86406e49dbacfbabd283877495}{ina219}}
+\begin{DoxyCompactList}\small\item\em cria instancia do I\+N\+A219 -\/ \mbox{\hyperlink{class_adafruit___i_n_a219}{Adafruit\+\_\+\+I\+N\+A219}} ina219 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___ina219_ga578f989ad06826b324d1b967152fc424}\label{group___ina219_ga578f989ad06826b324d1b967152fc424}} 
+unsigned long \mbox{\hyperlink{group___ina219_ga578f989ad06826b324d1b967152fc424}{tempo\+Ina219\+Rasc}} = 0
+\begin{DoxyCompactList}\small\item\em unsigned long, rascunho de tempo-\/timer do Ina219 \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{group___ina219_ga4355ce04a0249943875c3986a99e1f7c}{n\+\_\+ina}} = 0
+\begin{DoxyCompactList}\small\item\em rascunho de valor do ina219 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___ina219_ga048baae7540f2d3f654db2e9d1024f27}{media\+Volts}} = 0
+\begin{DoxyCompactList}\small\item\em media de volts medidos/lidos \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___ina219_gabfc2ba30a59fa1ceb41a60667ebc5099}\label{group___ina219_gabfc2ba30a59fa1ceb41a60667ebc5099}} 
+float \mbox{\hyperlink{group___ina219_gabfc2ba30a59fa1ceb41a60667ebc5099}{media\+Amperes}} = 0
+\begin{DoxyCompactList}\small\item\em media de amperes medidos/lidos \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___ina219_gaf6a7a0cdcb48861bfb423c0df0dee34d}{acc\+Volts}} = 0
+\begin{DoxyCompactList}\small\item\em acumulado de volts \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___ina219_ga81033b6412d7eb8a8f24f45f7d52f42f}{acc\+Amperes}} = 0
+\begin{DoxyCompactList}\small\item\em acumulado de amperes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___ina219_gabe9c3fa3a5f87dcf79e8252a6d08d0ed}\label{group___ina219_gabe9c3fa3a5f87dcf79e8252a6d08d0ed}} 
+bool \mbox{\hyperlink{group___ina219_gabe9c3fa3a5f87dcf79e8252a6d08d0ed}{para\+Leitura}} = false
+\begin{DoxyCompactList}\small\item\em para temporariamente leitura \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+rotinas-\/funcoes de tratamento da leitura de tensao e corrente do Ina219 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___ina219_gac4c9a1b763c356be1a2c58ee16d4206c}\label{group___ina219_gac4c9a1b763c356be1a2c58ee16d4206c}} 
+\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}!dbgMostraIna219@{dbgMostraIna219}}
+\index{dbgMostraIna219@{dbgMostraIna219}!Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+\doxysubsubsection{\texorpdfstring{dbgMostraIna219()}{dbgMostraIna219()}}
+{\footnotesize\ttfamily void dbg\+Mostra\+Ina219 (\begin{DoxyParamCaption}\item[{float}]{voltagem\+Circuito,  }\item[{float}]{voltagem\+Shunt,  }\item[{float}]{voltagem\+Entrada,  }\item[{float}]{corrente\+\_\+mA,  }\item[{float}]{potencia\+\_\+mW,  }\item[{float}]{media\+Volts,  }\item[{float}]{media\+Amperes }\end{DoxyParamCaption})}
+
+
+
+Debug mostra valores ina 219 (mA, mV, mW, media Volt, media A) 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em voltagem\+Circuito} & float;voltagem circuito. \\
+\hline
+{\em voltagem\+Shunt} & float;voltagem shunt. \\
+\hline
+{\em voltagem\+Entrada} & float;voltagem entrada. \\
+\hline
+{\em corrente\+\_\+mA} & float;corrente ma. \\
+\hline
+{\em potencia\+\_\+mW} & float;potencia mw. \\
+\hline
+{\em media\+Volts} & float;media volts. \\
+\hline
+{\em media\+Amperes} & float;media amperes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___ina219_gae284c923da4b61b37d40c37998cb2f22}\label{group___ina219_gae284c923da4b61b37d40c37998cb2f22}} 
+\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}!iniciaINA219@{iniciaINA219}}
+\index{iniciaINA219@{iniciaINA219}!Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+\doxysubsubsection{\texorpdfstring{iniciaINA219()}{iniciaINA219()}}
+{\footnotesize\ttfamily void inicia\+I\+N\+A219 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+inicia chip sensores de tensao e corrente ina219 
+
+Inicia I\+N\+A219, sensor de tensao e corrente, para saber carga do sistema.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___ina219_ga03a4f248036090faab4a941dcfef0efb}\label{group___ina219_ga03a4f248036090faab4a941dcfef0efb}} 
+\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}!leINA219@{leINA219}}
+\index{leINA219@{leINA219}!Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+\doxysubsubsection{\texorpdfstring{leINA219()}{leINA219()}}
+{\footnotesize\ttfamily void le\+I\+N\+A219 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+le sensores-\/entradas analogicas de tensao e corrente do ina219 
+
+Le ina 219.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group___ina219_ga81033b6412d7eb8a8f24f45f7d52f42f}\label{group___ina219_ga81033b6412d7eb8a8f24f45f7d52f42f}} 
+\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}!accAmperes@{accAmperes}}
+\index{accAmperes@{accAmperes}!Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+\doxysubsubsection{\texorpdfstring{accAmperes}{accAmperes}}
+{\footnotesize\ttfamily float acc\+Amperes = 0}
+
+
+
+acumulado de amperes 
+
+~\newline
+ \mbox{\Hypertarget{group___ina219_gaf6a7a0cdcb48861bfb423c0df0dee34d}\label{group___ina219_gaf6a7a0cdcb48861bfb423c0df0dee34d}} 
+\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}!accVolts@{accVolts}}
+\index{accVolts@{accVolts}!Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+\doxysubsubsection{\texorpdfstring{accVolts}{accVolts}}
+{\footnotesize\ttfamily float acc\+Volts = 0}
+
+
+
+acumulado de volts 
+
+~\newline
+ \mbox{\Hypertarget{group___ina219_ga048baae7540f2d3f654db2e9d1024f27}\label{group___ina219_ga048baae7540f2d3f654db2e9d1024f27}} 
+\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}!mediaVolts@{mediaVolts}}
+\index{mediaVolts@{mediaVolts}!Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+\doxysubsubsection{\texorpdfstring{mediaVolts}{mediaVolts}}
+{\footnotesize\ttfamily float media\+Volts = 0}
+
+
+
+media de volts medidos/lidos 
+
+~\newline
+ \mbox{\Hypertarget{group___ina219_ga4355ce04a0249943875c3986a99e1f7c}\label{group___ina219_ga4355ce04a0249943875c3986a99e1f7c}} 
+\index{Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}!n\_ina@{n\_ina}}
+\index{n\_ina@{n\_ina}!Interface-\/com-\/Ina219@{Interface-\/com-\/Ina219}}
+\doxysubsubsection{\texorpdfstring{n\_ina}{n\_ina}}
+{\footnotesize\ttfamily int16\+\_\+t n\+\_\+ina = 0}
+
+
+
+rascunho de valor do ina219 
+
+~\newline
+ 

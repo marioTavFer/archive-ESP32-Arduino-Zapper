@@ -1,0 +1,319 @@
+\hypertarget{group___sistema}{}\doxysection{Sistema-\/hardware}
+\label{group___sistema}\index{Sistema-\/hardware@{Sistema-\/hardware}}
+
+
+rotinas-\/funcoes relacionadas ao hardware E\+S\+P32 W\+R\+O\+O\+M-\/32  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___sistema_ga4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em inicializacao do zapper V9.\+0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gafe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Loops this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga5c40ced149523a85adb066acb6eaf83a}{da\+Beep}} (int tempo\+Bip)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\+D\+E\+F\+I\+N\+I\+C\+O\+E\+S/\+P\+R\+O\+T\+O\+T\+I\+P\+OS $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga037594cba3149346add242389b02769c}{avisa\+Xseg}} (int tempo\+Bip, int numero\+Bips)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ A\+V\+I\+SO DE N B\+E\+E\+PS P\+OR X S\+EG $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ 1 segundo entre bips (1000 ms) $\ast$$\ast$$\ast$cuidado com rotina para nao travar processamento \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga86c5640a0530c7e9cdf9f20af6eb86d0}{tick\+Relogio}} ()
+\begin{DoxyCompactList}\small\item\em relogio feito por software no loop -\/ nao vai usar \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga7595afe594d3f48c5c7e2f13113f5676}{inicia\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em envia msg ao monitor inicio do debug \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga22fd776f9ddd786c38935b3e3b5ee715}{dbg\+Mostra\+Dados}} (String mensagem, int valor)
+\begin{DoxyCompactList}\small\item\em mostra msg e dados -\/ monitor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga8f2d37b20f96fc9beb8749a680e4ff40}{inicia\+P\+W\+Ms}} ()
+\begin{DoxyCompactList}\small\item\em inicia ondas quadradas dos protocolos-\/tratamentos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga3c0ec91a25ac973b6ea87fc5bbd523b0}{termina\+Programa}} (int protocolo)
+\begin{DoxyCompactList}\small\item\em termina protocolo-\/tratamento \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga5e8103067621a79691f216d44ce96282}{liga\+P\+WM}} (float pwm\+Freq)
+\begin{DoxyCompactList}\small\item\em liga pwm \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gaf7ae2d73e10a403b11f1f28877bca8a0}{desliga\+P\+WM}} ()
+\begin{DoxyCompactList}\small\item\em desliga pwm \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gaaaeabc5783504a2ba8def7d56e5f377f}{termina\+ProgramaZ}} (int protocolo)
+\begin{DoxyCompactList}\small\item\em termina protocolo tipo zappicator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gacdc9bfd497f45df6debcaa94ccf9c28f}{liga\+P\+W\+MZ}} (float entra\+Freq)
+\begin{DoxyCompactList}\small\item\em liga pwm do tipo zappicator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gaf1f32477f6dbaab011f840aa4e9321f0}{desliga\+P\+W\+MZ}} ()
+\begin{DoxyCompactList}\small\item\em termina pwm do tipo zappicator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+rotinas-\/funcoes relacionadas ao hardware E\+S\+P32 W\+R\+O\+O\+M-\/32 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___sistema_ga037594cba3149346add242389b02769c}\label{group___sistema_ga037594cba3149346add242389b02769c}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!avisaXseg@{avisaXseg}}
+\index{avisaXseg@{avisaXseg}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{avisaXseg()}{avisaXseg()}}
+{\footnotesize\ttfamily void avisa\+Xseg (\begin{DoxyParamCaption}\item[{int}]{tempo\+Bip,  }\item[{int}]{numero\+Bips }\end{DoxyParamCaption})}
+
+
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ A\+V\+I\+SO DE N B\+E\+E\+PS P\+OR X S\+EG $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ 1 segundo entre bips (1000 ms) $\ast$$\ast$$\ast$cuidado com rotina para nao travar processamento 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tempo\+Bip} & int; The tempo bip (ms) \\
+\hline
+{\em numero\+Bips} & int; The numero bips. \\
+\hline
+\end{DoxyParams}
+$<$ numero\+Bips -\/ quantos bips
+
+$<$um bip -\/ tempo\+Bip de um bip
+
+$<$ 0,5 segundo entre bips\mbox{\Hypertarget{group___sistema_ga5c40ced149523a85adb066acb6eaf83a}\label{group___sistema_ga5c40ced149523a85adb066acb6eaf83a}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!daBeep@{daBeep}}
+\index{daBeep@{daBeep}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{daBeep()}{daBeep()}}
+{\footnotesize\ttfamily void da\+Beep (\begin{DoxyParamCaption}\item[{int}]{tempo\+Bip }\end{DoxyParamCaption})}
+
+
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\+D\+E\+F\+I\+N\+I\+C\+O\+E\+S/\+P\+R\+O\+T\+O\+T\+I\+P\+OS $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ 
+
+da um B\+E\+EP (tempo em milisegundos)
+
+bipa por(miliseg) definido em \char`\"{}int\char`\"{}
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tempo\+Bip} & int; The tempo bip em milisegundos. \\
+\hline
+\end{DoxyParams}
+$<$ bit, frequencia, tempo ms\mbox{\Hypertarget{group___sistema_ga22fd776f9ddd786c38935b3e3b5ee715}\label{group___sistema_ga22fd776f9ddd786c38935b3e3b5ee715}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!dbgMostraDados@{dbgMostraDados}}
+\index{dbgMostraDados@{dbgMostraDados}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{dbgMostraDados()}{dbgMostraDados()}}
+{\footnotesize\ttfamily void dbg\+Mostra\+Dados (\begin{DoxyParamCaption}\item[{String}]{mensagem,  }\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+mostra msg e dados -\/ monitor 
+
+Debug mostra dados.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em mensagem} & The mensagem (String). \\
+\hline
+{\em valor} & The valor (int). \\
+\hline
+\end{DoxyParams}
+$<$ mensagem para monitor
+
+$<$ valor (int) para monitor\mbox{\Hypertarget{group___sistema_gaf7ae2d73e10a403b11f1f28877bca8a0}\label{group___sistema_gaf7ae2d73e10a403b11f1f28877bca8a0}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!desligaPWM@{desligaPWM}}
+\index{desligaPWM@{desligaPWM}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{desligaPWM()}{desligaPWM()}}
+{\footnotesize\ttfamily void desliga\+P\+WM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+desliga pwm 
+
+Desliga pwm.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___sistema_gaf1f32477f6dbaab011f840aa4e9321f0}\label{group___sistema_gaf1f32477f6dbaab011f840aa4e9321f0}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!desligaPWMZ@{desligaPWMZ}}
+\index{desligaPWMZ@{desligaPWMZ}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{desligaPWMZ()}{desligaPWMZ()}}
+{\footnotesize\ttfamily void desliga\+P\+W\+MZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+termina pwm do tipo zappicator 
+
+Desliga pwm do programa zappicator.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___sistema_ga7595afe594d3f48c5c7e2f13113f5676}\label{group___sistema_ga7595afe594d3f48c5c7e2f13113f5676}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!iniciaDebug@{iniciaDebug}}
+\index{iniciaDebug@{iniciaDebug}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{iniciaDebug()}{iniciaDebug()}}
+{\footnotesize\ttfamily void inicia\+Debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+envia msg ao monitor inicio do debug 
+
+Inicia debug, envia msg para monitor (pela U\+SB)
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___sistema_ga8f2d37b20f96fc9beb8749a680e4ff40}\label{group___sistema_ga8f2d37b20f96fc9beb8749a680e4ff40}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!iniciaPWMs@{iniciaPWMs}}
+\index{iniciaPWMs@{iniciaPWMs}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{iniciaPWMs()}{iniciaPWMs()}}
+{\footnotesize\ttfamily void inicia\+P\+W\+Ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+inicia ondas quadradas dos protocolos-\/tratamentos 
+
+Inicia P\+W\+Ms, clark-\/rife e zappicator sao dois canais (bits/pinos)
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___sistema_ga5e8103067621a79691f216d44ce96282}\label{group___sistema_ga5e8103067621a79691f216d44ce96282}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!ligaPWM@{ligaPWM}}
+\index{ligaPWM@{ligaPWM}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{ligaPWM()}{ligaPWM()}}
+{\footnotesize\ttfamily void liga\+P\+WM (\begin{DoxyParamCaption}\item[{float}]{pwm\+Freq }\end{DoxyParamCaption})}
+
+
+
+liga pwm 
+
+Liga pwm.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em pwm\+Freq} & float; (frequencia de saida). \\
+\hline
+\end{DoxyParams}
+$<$ 1 bit duty
+
+$<$ 0 ou 1 = 50\% duty
+
+$<$ 8 bits duty
+
+$<$ 127 = 50\% duty\mbox{\Hypertarget{group___sistema_gacdc9bfd497f45df6debcaa94ccf9c28f}\label{group___sistema_gacdc9bfd497f45df6debcaa94ccf9c28f}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!ligaPWMZ@{ligaPWMZ}}
+\index{ligaPWMZ@{ligaPWMZ}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{ligaPWMZ()}{ligaPWMZ()}}
+{\footnotesize\ttfamily void liga\+P\+W\+MZ (\begin{DoxyParamCaption}\item[{float}]{entra\+Freq }\end{DoxyParamCaption})}
+
+
+
+liga pwm do tipo zappicator 
+
+Liga pwm do programa zappicator.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em entra\+Freq} & float; frequencia de trabalho. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___sistema_gafe461d27b9c48d5921c00d521181f12f}\label{group___sistema_gafe461d27b9c48d5921c00d521181f12f}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!loop@{loop}}
+\index{loop@{loop}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Loops this object. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ controle do protocolo Clark
+
+$<$ -\/--- controle do Clark -\/ 7 min
+
+$<$ -\/--- controle do Clark 20min
+
+$<$ --- termina Clark se fim
+
+$<$ controle do protocolo zappicator
+
+$<$ controle do protocolo Rife pre-\/definido
+
+$<$ controle do protocolo Rife com N. do protocolo
+
+$<$ controle da entrada manual de frequencias Rife (6 freq+duracao)
+
+$<$ le sensor Ina219 -\/ corrente e tensao\mbox{\Hypertarget{group___sistema_ga4fc01d736fe50cf5b977f755b675f11d}\label{group___sistema_ga4fc01d736fe50cf5b977f755b675f11d}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!setup@{setup}}
+\index{setup@{setup}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+inicializacao do zapper V9.\+0 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___sistema_ga3c0ec91a25ac973b6ea87fc5bbd523b0}\label{group___sistema_ga3c0ec91a25ac973b6ea87fc5bbd523b0}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!terminaPrograma@{terminaPrograma}}
+\index{terminaPrograma@{terminaPrograma}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{terminaPrograma()}{terminaPrograma()}}
+{\footnotesize\ttfamily void termina\+Programa (\begin{DoxyParamCaption}\item[{int}]{protocolo }\end{DoxyParamCaption})}
+
+
+
+termina protocolo-\/tratamento 
+
+Termina programa-\/protocolo, limpa status e da uns(5) beeps.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em protocolo} & int; protocolo. \\
+\hline
+\end{DoxyParams}
+$<$ deve faltar \char`\"{}limpar\char`\"{} mais flags e Ns\mbox{\Hypertarget{group___sistema_gaaaeabc5783504a2ba8def7d56e5f377f}\label{group___sistema_gaaaeabc5783504a2ba8def7d56e5f377f}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!terminaProgramaZ@{terminaProgramaZ}}
+\index{terminaProgramaZ@{terminaProgramaZ}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{terminaProgramaZ()}{terminaProgramaZ()}}
+{\footnotesize\ttfamily void termina\+ProgramaZ (\begin{DoxyParamCaption}\item[{int}]{protocolo }\end{DoxyParamCaption})}
+
+
+
+termina protocolo tipo zappicator 
+
+Termina programa zappicator (rotinas timer 1).
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em protocolo} & int; qual protocolo. \\
+\hline
+\end{DoxyParams}
+$<$ deve faltar \char`\"{}limpar\char`\"{} mais flags e Ns\mbox{\Hypertarget{group___sistema_ga86c5640a0530c7e9cdf9f20af6eb86d0}\label{group___sistema_ga86c5640a0530c7e9cdf9f20af6eb86d0}} 
+\index{Sistema-\/hardware@{Sistema-\/hardware}!tickRelogio@{tickRelogio}}
+\index{tickRelogio@{tickRelogio}!Sistema-\/hardware@{Sistema-\/hardware}}
+\doxysubsubsection{\texorpdfstring{tickRelogio()}{tickRelogio()}}
+{\footnotesize\ttfamily void tick\+Relogio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+relogio feito por software no loop -\/ nao vai usar 
+
+Tick relogio feito por software usando o loop (pessima ideia) mudado para R\+T\+C-\/\+D\+S1307+relogio interno do sistema, isto, na versao/modulo Asensores\+R\+T\+C-\/\+B\+D\+V7.\+ino.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}

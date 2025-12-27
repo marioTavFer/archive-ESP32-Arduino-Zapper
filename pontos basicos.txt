@@ -1,0 +1,30 @@
+Este projeto não está terminado. Está disponível aqui, para quem quiser aproveitar alguma ideia ou continuá-lo. Está completamente liberado, para copiar, reproduzir, aprimorar. Bom divertimento!
+
+PONTOS BÁSICOS
+Máquina IoT de baixo custo, baixo consumo, modular, múltiplas interfaces, protocolos e aplicações, que funcione autônoma off-line e/ou on-line.  Primeira aplicação: máquina com múltiplas funções para medicina integrativa.
+
+Núcleo do sistema deve ser modular e ter como foco atender projetos de IoT, indústria 4.0, automação geral (industrial, predial, processos), equipamentos de supervisão, telemetria e relacionados com o bem-estar e a medicina. Todas as áreas têm em comum (processos locais e/ou remotos de) acionamento, supervisão, monitoramento de interfaces digitais, analógicas ou de comunicação. 
+
+O núcleo de sistema que seja independente do hardware (abstração).
+
+Prioridade para a utilização de software e bibliotecas free e open-source, que quando não o forem, serão de própria autoria.
+
+Hardware deve ser de baixo custo, altamente integrado e com uma comunidade de desenvolvedores madura (inteligência coletiva).
+
+O software (desenvolvido em C++), inicialmente, utilizou a base de conhecimento da arquitetura arduino (hardware e firmware) e suas bibliotecas. No entanto, no meio do projeto, evoluiu para arquitetura ESP32, da Espressif (www.espressif.com) chip 32 bits, dual core e altamente integrado com wifi, bluetooth, criptografia, 4 MB de flash, etc. Um grande entrave para ser, este, o hardware definitivo, é que o firmware, núcleo do IDF, é um software fechado, não é open-source.
+
+Ainda se utiliza a estrutura de software e algumas bibliotecas do arduino. O software de ESP32 tem um layer que permite essa otimização na portabilidade do software anterior, mas, como consequência, não permite utilizar todo potencial do ESP32 e de seu framework próprio (IDF – IoT Development Framework) cuja base é o FreeRTOS.
+
+Na próxima alteração, o software deverá ser compatível com IDF.
+
+Outra análise a ser feita, no futuro, é a possibilidade de uma versão em Python, também utilizando ESP32.
+
+Utiliza uma HMI, display touch da Nextion 3.5’’ (480x320) (www.nextion.tech), com comunicação serial - TTL, que já tem várias primitivas de criação de elementos gráficos, reduzindo o tempo de desenvolvimento drasticamente, em contrapartida, o custo também é maior e a qualidade gráfica não é a melhor.   
+
+SEGURANÇA
+Para ter acesso à máquina, cada operador tem o seu Login e tem dois tipos de operador, o operador administrador que tem acesso a efetuar cadastros e outras operações de administração e operador da máquina que executa funções da máquina (inicia/termina processos).
+Todas as operações efetuadas são registradas e podem ser consultadas pelo (s) administrador (es).
+
+O firmware da máquina (ESP32) tem vários algoritmos de criptografia e segurança (AES-256, SHA-1, -256, -384, -512, RSA) que podem ser utilizados para criptografar arquivos (dados) e a memória flash da máquina. Também tem proteção contra leitura do software da máquina (pelo efuse).
+
+No caso da aplicação para equipamento médico, as interfaces com conexão corpo humano são todas isoladas oticamente e alimentadas com baterias.

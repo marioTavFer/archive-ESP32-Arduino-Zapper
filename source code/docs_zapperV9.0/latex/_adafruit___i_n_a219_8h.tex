@@ -1,0 +1,116 @@
+\hypertarget{_adafruit___i_n_a219_8h}{}\doxysection{C\+:/\+Users/mario/\+Documents/\+Arduino/\+E\+S\+P32\+\_\+zapper\+V9.0/arquivos-\/dox/\+Adafruit\+\_\+\+I\+N\+A219/\+Adafruit\+\_\+\+I\+N\+A219.h File Reference}
+\label{_adafruit___i_n_a219_8h}\index{C:/Users/mario/Documents/Arduino/ESP32\_zapperV9.0/arquivos-\/dox/Adafruit\_INA219/Adafruit\_INA219.h@{C:/Users/mario/Documents/Arduino/ESP32\_zapperV9.0/arquivos-\/dox/Adafruit\_INA219/Adafruit\_INA219.h}}
+{\ttfamily \#include \char`\"{}W\+Program.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_adafruit___i_n_a219}{Adafruit\+\_\+\+I\+N\+A219}}
+\begin{DoxyCompactList}\small\item\em Class that stores state and functions for interacting with I\+N\+A219 current/power monitor IC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a01099281ea98bb6c1aab825f05d9818c}\label{_adafruit___i_n_a219_8h_a01099281ea98bb6c1aab825f05d9818c}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_a01099281ea98bb6c1aab825f05d9818c}{I\+N\+A219\+\_\+\+A\+D\+D\+R\+E\+SS}}~(0x40)
+\begin{DoxyCompactList}\small\item\em default I2C address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_acf1557fd16ff50351f795b87a9d4cddf}\label{_adafruit___i_n_a219_8h_acf1557fd16ff50351f795b87a9d4cddf}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_acf1557fd16ff50351f795b87a9d4cddf}{I\+N\+A219\+\_\+\+R\+E\+AD}}~(0x01)
+\begin{DoxyCompactList}\small\item\em read \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_aab641248471a0f356b9ff6329bcd8084}\label{_adafruit___i_n_a219_8h_aab641248471a0f356b9ff6329bcd8084}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_aab641248471a0f356b9ff6329bcd8084}{I\+N\+A219\+\_\+\+R\+E\+G\+\_\+\+C\+O\+N\+F\+IG}}~(0x00)
+\begin{DoxyCompactList}\small\item\em config register address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a2f369100185ff9e3855dcab0eee318ad}\label{_adafruit___i_n_a219_8h_a2f369100185ff9e3855dcab0eee318ad}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_a2f369100185ff9e3855dcab0eee318ad}{I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+S\+ET}}~(0x8000)
+\begin{DoxyCompactList}\small\item\em reset bit \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a9cee115fade153b8c7ffd6e26c18ecd7}\label{_adafruit___i_n_a219_8h_a9cee115fade153b8c7ffd6e26c18ecd7}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_a9cee115fade153b8c7ffd6e26c18ecd7}{I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+V\+O\+L\+T\+A\+G\+E\+R\+A\+N\+G\+E\+\_\+\+M\+A\+SK}}~(0x2000)
+\begin{DoxyCompactList}\small\item\em mask for bus voltage range \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a5bf05963e83908f3345438959694a0ba}\label{_adafruit___i_n_a219_8h_a5bf05963e83908f3345438959694a0ba}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_a5bf05963e83908f3345438959694a0ba}{I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+A\+I\+N\+\_\+\+M\+A\+SK}}~(0x1800)
+\begin{DoxyCompactList}\small\item\em mask for gain bits \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_ad4b5799502981d36922ce087aa5b96c9}\label{_adafruit___i_n_a219_8h_ad4b5799502981d36922ce087aa5b96c9}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_ad4b5799502981d36922ce087aa5b96c9}{I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+A\+D\+C\+R\+E\+S\+\_\+\+M\+A\+SK}}~(0x0780)
+\begin{DoxyCompactList}\small\item\em mask for bus A\+DC resolution bits \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_ad66384c679c835a2ab915fc50db2ed78}\label{_adafruit___i_n_a219_8h_ad66384c679c835a2ab915fc50db2ed78}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_ad66384c679c835a2ab915fc50db2ed78}{I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+\+M\+A\+SK}}~(0x0078)
+\begin{DoxyCompactList}\small\item\em mask for shunt A\+DC resolution bits \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_aa4a8474dd10779fd9915d2eaa7df77e8}\label{_adafruit___i_n_a219_8h_aa4a8474dd10779fd9915d2eaa7df77e8}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_aa4a8474dd10779fd9915d2eaa7df77e8}{I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK}}~(0x0007)
+\begin{DoxyCompactList}\small\item\em mask for operating mode bits \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a99de9caaed1cbc48b2ecfe4b6c5ef59d}\label{_adafruit___i_n_a219_8h_a99de9caaed1cbc48b2ecfe4b6c5ef59d}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_a99de9caaed1cbc48b2ecfe4b6c5ef59d}{I\+N\+A219\+\_\+\+R\+E\+G\+\_\+\+S\+H\+U\+N\+T\+V\+O\+L\+T\+A\+GE}}~(0x01)
+\begin{DoxyCompactList}\small\item\em shunt voltage register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a06987d28f8a8885f7d1f6a10d0ec6b3b}\label{_adafruit___i_n_a219_8h_a06987d28f8a8885f7d1f6a10d0ec6b3b}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_a06987d28f8a8885f7d1f6a10d0ec6b3b}{I\+N\+A219\+\_\+\+R\+E\+G\+\_\+\+B\+U\+S\+V\+O\+L\+T\+A\+GE}}~(0x02)
+\begin{DoxyCompactList}\small\item\em bus voltage register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_add277c6e0a9783de517e8a2ee2cdad86}\label{_adafruit___i_n_a219_8h_add277c6e0a9783de517e8a2ee2cdad86}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_add277c6e0a9783de517e8a2ee2cdad86}{I\+N\+A219\+\_\+\+R\+E\+G\+\_\+\+P\+O\+W\+ER}}~(0x03)
+\begin{DoxyCompactList}\small\item\em power register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_aee975d7ad192f4eadf01b6d96c1a7c50}\label{_adafruit___i_n_a219_8h_aee975d7ad192f4eadf01b6d96c1a7c50}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_aee975d7ad192f4eadf01b6d96c1a7c50}{I\+N\+A219\+\_\+\+R\+E\+G\+\_\+\+C\+U\+R\+R\+E\+NT}}~(0x04)
+\begin{DoxyCompactList}\small\item\em current register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a7ec015caf45bb013e8858a6e53e47e3c}\label{_adafruit___i_n_a219_8h_a7ec015caf45bb013e8858a6e53e47e3c}} 
+\#define \mbox{\hyperlink{_adafruit___i_n_a219_8h_a7ec015caf45bb013e8858a6e53e47e3c}{I\+N\+A219\+\_\+\+R\+E\+G\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+ON}}~(0x05)
+\begin{DoxyCompactList}\small\item\em calibration register \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a06fc87d81c62e9abb8790b6e5713c55b}\label{_adafruit___i_n_a219_8h_a06fc87d81c62e9abb8790b6e5713c55b}} 
+enum \{ {\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+V\+O\+L\+T\+A\+G\+E\+R\+A\+N\+G\+E\+\_\+16V} = (0x0000), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+V\+O\+L\+T\+A\+G\+E\+R\+A\+N\+G\+E\+\_\+32V} = (0x2000)
+ \}
+\begin{DoxyCompactList}\small\item\em bus voltage range values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_adf764cbdea00d65edcd07bb9953ad2b7}\label{_adafruit___i_n_a219_8h_adf764cbdea00d65edcd07bb9953ad2b7}} 
+enum \{ {\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+A\+I\+N\+\_\+1\+\_\+40\+MV} = (0x0000), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+A\+I\+N\+\_\+2\+\_\+80\+MV} = (0x0800), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+A\+I\+N\+\_\+4\+\_\+160\+MV} = (0x1000), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+A\+I\+N\+\_\+8\+\_\+320\+MV} = (0x1800)
+ \}
+\begin{DoxyCompactList}\small\item\em values for gain bits \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_a99fb83031ce9923c84392b4e92f956b5}\label{_adafruit___i_n_a219_8h_a99fb83031ce9923c84392b4e92f956b5}} 
+enum \{ {\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+A\+D\+C\+R\+E\+S\+\_\+9\+B\+IT} = (0x0000), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+A\+D\+C\+R\+E\+S\+\_\+10\+B\+IT} = (0x0080), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+A\+D\+C\+R\+E\+S\+\_\+11\+B\+IT} = (0x0100), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+IT} = (0x0180)
+ \}
+\begin{DoxyCompactList}\small\item\em values for bus A\+DC resolution \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_abc6126af1d45847bc59afa0aa3216b04}\label{_adafruit___i_n_a219_8h_abc6126af1d45847bc59afa0aa3216b04}} 
+enum \{ \newline
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+9\+B\+I\+T\+\_\+1\+S\+\_\+84\+US} = (0x0000), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+10\+B\+I\+T\+\_\+1\+S\+\_\+148\+US} = (0x0008), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+11\+B\+I\+T\+\_\+1\+S\+\_\+276\+US} = (0x0010), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+1\+S\+\_\+532\+US} = (0x0018), 
+\newline
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+2\+S\+\_\+1060\+US} = (0x0048), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+4\+S\+\_\+2130\+US} = (0x0050), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+8\+S\+\_\+4260\+US} = (0x0058), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+16\+S\+\_\+8510\+US} = (0x0060), 
+\newline
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+32\+S\+\_\+17\+MS} = (0x0068), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+64\+S\+\_\+34\+MS} = (0x0070), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+A\+D\+C\+R\+E\+S\+\_\+12\+B\+I\+T\+\_\+128\+S\+\_\+69\+MS} = (0x0078)
+ \}
+\begin{DoxyCompactList}\small\item\em values for shunt A\+DC resolution \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_adafruit___i_n_a219_8h_adc29c2ff13d900c2f185ee95427fb06c}\label{_adafruit___i_n_a219_8h_adc29c2ff13d900c2f185ee95427fb06c}} 
+enum \{ \newline
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+P\+O\+W\+E\+R\+D\+O\+WN} = (0x0000), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+V\+O\+L\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+ED} = (0x0001), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+B\+V\+O\+L\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+ED} = (0x0002), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+A\+N\+D\+B\+V\+O\+L\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+ED} = (0x0003), 
+\newline
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+C\+O\+FF} = (0x0004), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+V\+O\+L\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US} = (0x0005), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+B\+V\+O\+L\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US} = (0x0006), 
+{\bfseries I\+N\+A219\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+A\+N\+D\+B\+V\+O\+L\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US} = (0x0007)
+ \}
+\begin{DoxyCompactList}\small\item\em values for operating mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a library for the Adafruit I\+N\+A219 breakout board -\/---$>$ \href{https://www.adafruit.com/products/904}{\texttt{ https\+://www.\+adafruit.\+com/products/904}}
+
+Adafruit invests time and resources providing this open source code, please support Adafruit and open-\/source hardware by purchasing products from Adafruit!
+
+Written by Kevin \char`\"{}\+K\+T\+O\+W\+N\char`\"{} Townsend for Adafruit Industries.
+
+B\+SD license, all text here must be included in any redistribution. 

@@ -1,0 +1,416 @@
+\hypertarget{_e_s_p32__zapper_v9_80_8ino}{}\doxysection{C\+:/\+Users/mario/\+Documents/\+Arduino/\+E\+S\+P32\+\_\+zapper\+V9.0/\+E\+S\+P32\+\_\+zapper\+V9.0.ino File Reference}
+\label{_e_s_p32__zapper_v9_80_8ino}\index{C:/Users/mario/Documents/Arduino/ESP32\_zapperV9.0/ESP32\_zapperV9.0.ino@{C:/Users/mario/Documents/Arduino/ESP32\_zapperV9.0/ESP32\_zapperV9.0.ino}}
+
+
+Modulo Esp32-\/zapper v 9.\+0 funcoes de tratamento do P\+WM para zapper, clark, rife, zappicator. funcoes da tela H\+MI -\/ Nextion. funcoes de leitura do I\+N\+A219 -\/ sensor tensao e corrente.  
+
+
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+I\+N\+A219.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Nextion.\+h$>$}\newline
+{\ttfamily \#include $<$tabelas\+\_\+rife-\/esp32.\+h$>$}\newline
+{\ttfamily \#include $<$mario\+\_\+nextion.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___sistema_ga5c40ced149523a85adb066acb6eaf83a}{da\+Beep}} (int tempo\+Bip)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\+D\+E\+F\+I\+N\+I\+C\+O\+E\+S/\+P\+R\+O\+T\+O\+T\+I\+P\+OS $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga037594cba3149346add242389b02769c}{avisa\+Xseg}} (int tempo\+Bip, int numero\+Bips)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ A\+V\+I\+SO DE N B\+E\+E\+PS P\+OR X S\+EG $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ 1 segundo entre bips (1000 ms) $\ast$$\ast$$\ast$cuidado com rotina para nao travar processamento \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga86c5640a0530c7e9cdf9f20af6eb86d0}{tick\+Relogio}} ()
+\begin{DoxyCompactList}\small\item\em relogio feito por software no loop -\/ nao vai usar \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga7595afe594d3f48c5c7e2f13113f5676}{inicia\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em envia msg ao monitor inicio do debug \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga22fd776f9ddd786c38935b3e3b5ee715}{dbg\+Mostra\+Dados}} (String mensagem, int valor)
+\begin{DoxyCompactList}\small\item\em mostra msg e dados -\/ monitor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gabac02eb0951cfbc536b8081abeb6d48f}{limpa\+Status}} (int protocolo)
+\begin{DoxyCompactList}\small\item\em limpa todos flags do protocolo em execucao \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaa4d239d9f7aedc84555640f1a7367391}{tempo\+Marca\+Inicio}} ()
+\begin{DoxyCompactList}\small\item\em guarda hora que comecou protocolo \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{group___protocolos_gacb8bc020a5bca589a69659404bcd3b9d}{tempo\+Le\+Agora}} ()
+\begin{DoxyCompactList}\small\item\em retorna false se estourou tempo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga8f2d37b20f96fc9beb8749a680e4ff40}{inicia\+P\+W\+Ms}} ()
+\begin{DoxyCompactList}\small\item\em inicia ondas quadradas dos protocolos-\/tratamentos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga3c0ec91a25ac973b6ea87fc5bbd523b0}{termina\+Programa}} (int protocolo)
+\begin{DoxyCompactList}\small\item\em termina protocolo-\/tratamento \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga5e8103067621a79691f216d44ce96282}{liga\+P\+WM}} (float pwm\+Freq)
+\begin{DoxyCompactList}\small\item\em liga pwm \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gaf7ae2d73e10a403b11f1f28877bca8a0}{desliga\+P\+WM}} ()
+\begin{DoxyCompactList}\small\item\em desliga pwm \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gaaaeabc5783504a2ba8def7d56e5f377f}{termina\+ProgramaZ}} (int protocolo)
+\begin{DoxyCompactList}\small\item\em termina protocolo tipo zappicator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gacdc9bfd497f45df6debcaa94ccf9c28f}{liga\+P\+W\+MZ}} (float entra\+Freq)
+\begin{DoxyCompactList}\small\item\em liga pwm do tipo zappicator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gaf1f32477f6dbaab011f840aa4e9321f0}{desliga\+P\+W\+MZ}} ()
+\begin{DoxyCompactList}\small\item\em termina pwm do tipo zappicator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___ina219_gae284c923da4b61b37d40c37998cb2f22}{inicia\+I\+N\+A219}} ()
+\begin{DoxyCompactList}\small\item\em inicia chip sensores de tensao e corrente ina219 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___ina219_ga03a4f248036090faab4a941dcfef0efb}{le\+I\+N\+A219}} ()
+\begin{DoxyCompactList}\small\item\em le sensores-\/entradas analogicas de tensao e corrente do ina219 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___ina219_gac4c9a1b763c356be1a2c58ee16d4206c}{dbg\+Mostra\+Ina219}} (float voltagem\+Circuito, float voltagem\+Shunt, float voltagem\+Entrada, float corrente\+\_\+mA, float potencia\+\_\+mW, float \mbox{\hyperlink{group___ina219_ga048baae7540f2d3f654db2e9d1024f27}{media\+Volts}}, float \mbox{\hyperlink{group___ina219_gabfc2ba30a59fa1ceb41a60667ebc5099}{media\+Amperes}})
+\begin{DoxyCompactList}\small\item\em Debug mostra valores ina 219 (mA, mV, mW, media Volt, media A) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gab8667d087cf9a07ede0ef29a0d1f24fb}{comeca\+Clark}} ()
+\begin{DoxyCompactList}\small\item\em Inicia protocolo C\+L\+A\+RK. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga2a837acb7ec707c027afddf407ec77b1}{proximo\+Par\+Clark}} ()
+\begin{DoxyCompactList}\small\item\em Proximo par clark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga50fac50aee8e7196e134c67571215353}{clark\+\_\+7min}} ()
+\begin{DoxyCompactList}\small\item\em Controle de tempo (7 min) -\/ C\+L\+A\+RK. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga2def40b11528ced057d8ba84974525b4}{clark\+\_\+20min}} ()
+\begin{DoxyCompactList}\small\item\em Controle de tempo (20 min) -\/ Clark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga26289eabd079d22550139f47c8f566ef}{avanca\+Barra\+Clark}} (int incremento)
+\begin{DoxyCompactList}\small\item\em Avanca barra clark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaed7609b143facc12f8901978d87cabc6}{comeca\+Zappic}} ()
+\begin{DoxyCompactList}\small\item\em comeca Z\+A\+P\+P\+I\+C\+A\+T\+OR \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga559d78c6e10034028d1a559a9742fa0c}{avanca\+Barra\+Zapp}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em Avanca barra zapp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga3e17fdf682148d28b7e21381b4ea05cb}{controle\+Zappic}} ()
+\begin{DoxyCompactList}\small\item\em Controle do zappicator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gab0fae150413bb5377e816ea1485e8bbb}{prepara\+Rife\+BichoX}} (int \mbox{\hyperlink{group___protocolos_ga76d261dae96f54c726b098788f4db920}{qual\+Rife}})
+\begin{DoxyCompactList}\small\item\em Prepara rife bicho (le tabela de frequencias) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaacefdb8ad31687c14b79b78caf80e589}{comeca\+Rife\+Pre}} (int \mbox{\hyperlink{group___protocolos_ga76d261dae96f54c726b098788f4db920}{qual\+Rife}})
+\begin{DoxyCompactList}\small\item\em Comeca R\+I\+FE P\+RE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gabd97aaefa4fd44b1da132162c1af6dbf}{proximo\+Rife\+Pre}} ()
+\begin{DoxyCompactList}\small\item\em Proximo rife pre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga7c165e5439fa5bd4af775325b54524d4}{avanca\+Barra\+Rife\+Pre}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em A\+L\+GO E\+S\+T\+R\+A\+N\+HO C\+OM E\+S\+TA A\+V\+A\+N\+CA B\+A\+R\+R\+AS DO R\+I\+FE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaf3cca3f240bff13bd88ece04c27c825e}{controle\+Rife\+Pre}} ()
+\begin{DoxyCompactList}\small\item\em Controle rife pre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga797b8f3af470a691610c1c05cc849452}{comeca\+Rife\+E\+T\+D\+FL}} (int \mbox{\hyperlink{group___protocolos_ga76d261dae96f54c726b098788f4db920}{qual\+Rife}})
+\begin{DoxyCompactList}\small\item\em R\+I\+FE E\+T\+D\+FL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaecc555a769f96e53491a76fecb4a63ee}{proximo\+Rife\+E\+T\+D\+FL}} ()
+\begin{DoxyCompactList}\small\item\em Proximo rife etdfl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga69ca9875f7c09c5710ee640d82525921}{avanca\+Barra\+Rife\+E\+T\+D\+FL}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em Avanca barra rife etdfl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga189617e5aa7e730c0abe0393b4e970ad}{controle\+Rife\+E\+T\+D\+FL}} ()
+\begin{DoxyCompactList}\small\item\em Controle rife etdfl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga7d44653a760ceb5fde10d5ab3d0fa75c}{comeca\+Rife\+Manual}} ()
+\begin{DoxyCompactList}\small\item\em Comeca R\+I\+FE M\+A\+N\+U\+AL vai ler frequencias e tempos; numero lido -\/ getvalue -\/ usa little endian order 0x01, 0x02, 0x03,0x04 (4 bytes na msg de retorno) 0x01+(0x02$\ast$256)+(0x03$\ast$65536)+(0x04$\ast$16777216) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga1694f7868c868f578eb419aae8e67ec1}{proximo\+Rife\+Manual}} ()
+\begin{DoxyCompactList}\small\item\em Proximo rife manual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaaedbe7d1dcccb8d69791e6dee7b1748f}{avanca\+Barra\+Rife\+Manual}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em Avanca barra rife manual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaf8f31cf3c84cb588d1e551f5f6fe1141}{controle\+Rife\+Manual}} ()
+\begin{DoxyCompactList}\small\item\em Controle rife manual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_ga4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em inicializacao do zapper V9.\+0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gafe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Loops this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga78b96a4702ac5ae53803369bd6a65c54}{clark\+Prot\+\_\+iniciar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\+P\+A\+G\+I\+N\+AS definidas no \mbox{\hyperlink{mario__nextion_8h}{mario\+\_\+nextion.\+h}} $\ast$$\ast$$\ast$$\ast$$\ast$ Nex\+Page page0 = Nex\+Page(0, 0, \char`\"{}page0\char`\"{});//menu\+Princ-\/\+Menu Principal Nex\+Page page1 = Nex\+Page(1, 0, \char`\"{}page1\char`\"{}); //clark\+Prot-\/\+Protocolo C\+L\+A\+RK Nex\+Page page2 = Nex\+Page(2, 0, \char`\"{}page2\char`\"{});//teste01-\/pag de teste geral Nex\+Page page3 = Nex\+Page(3, 0, \char`\"{}page3\char`\"{});//rife\+Pre-\/\+Protocolo R\+I\+FE pre-\/ definido Nex\+Page page4 = Nex\+Page(4, 0, \char`\"{}page4\char`\"{});//zappic\+Prot-\/\+Protocolo Zappicator Nex\+Page page5 = Nex\+Page(5, 0, \char`\"{}page5\char`\"{});//rife\+E\+T\+D\+F\+L-\/\+Protocolo Rife c/\+E\+T\+D\+FL 1017-\/ 2018 Nex\+Page page6 = Nex\+Page(6, 0, \char`\"{}page6\char`\"{});//pag\+Fig-\/pag com figura grande Nex\+Page page7 = Nex\+Page(7, 0, \char`\"{}page7\char`\"{});//rife\+Manual-\/ pag R\+I\+FE Manual 6 seq de freq+tempo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga098f5f23a741d6f10da02d21b656a274}{rife\+Pre\+\_\+iniciar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife pre qdo botao iniciar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gafd6e9db66674a2b9904603e4c0a59b28}{zappic\+Prot\+\_\+iniciar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the zappic prot qdo botao iniciar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaddcd68e808c83b00bfb6ebef548c00a5}{rife\+E\+T\+D\+F\+L\+\_\+iniciar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl qdo botao iniciar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga85f1edc9dc405740401bac4a90dc1b25}{rife\+Manual\+\_\+iniciar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual qdo botao iniciar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga8821dfb3bc0b6d8db72798f5cf81a3a2}{clark\+Prot\+\_\+cancelar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the clark prot qdo botao cancelar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaddd3050634e3d9c6341277908a99b514}{rife\+Pre\+\_\+cancelar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife pre qdo botao cancelar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gab0a14b4fc6cd077a1ac7ff1fb8c77e46}{zappic\+Prot\+\_\+cancelar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the zappic prot qdo botao cancelar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga8d53ec7b39ac7c4fabe4251a88d317b3}{rife\+E\+T\+D\+F\+L\+\_\+cancelar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl qdo botao cancelar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga83ea912b9ab7148338c0c7ddb60c8f8f}{rife\+Manual\+\_\+cancelar\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual qdo botao cancelar pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga2b0f910fc3c016ab15fcbe696db6b4d7}{rife\+Pre\+\_\+bicho1\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em ==== R\+I\+FE Predefindo (bicho-\/1) botao \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga0294e0168be55ca56360735c3464b24a}{rife\+Pre\+\_\+bicho2\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife pre bicho 2 botao pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga69545d94d88ef834817945099b1e4012}{rife\+Pre\+\_\+bicho3\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife pre bicho 3 botao pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga412d0bbb75190546050731f4a9939380}{rife\+E\+T\+D\+F\+L\+\_\+ok\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em R\+I\+F\+E(2)-\/teclado botao OK, coloca no display o nome e etapas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga2622f3ef11ee5e8e31585ef278cd84cb}{rife\+E\+T\+D\+F\+L\+\_\+n1\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 1 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaa0c49c3b3940f8a00dab7c2028581018}{rife\+E\+T\+D\+F\+L\+\_\+n2\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 2 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga42f108825c9cae51e6313a091cf6133b}{rife\+E\+T\+D\+F\+L\+\_\+n3\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 3 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga14d765ff0329c7794d3acbabdc0e64e7}{rife\+E\+T\+D\+F\+L\+\_\+n4\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 4 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga34b0f63e94ad19af591dc590c68f5e5c}{rife\+E\+T\+D\+F\+L\+\_\+n5\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 5 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga739859d76576fb72e43b6c2934a39963}{rife\+E\+T\+D\+F\+L\+\_\+n6\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 6 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga3d8da559b44c0fdc547fa0c553087301}{rife\+E\+T\+D\+F\+L\+\_\+n7\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 7 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gae8bedcecde59ee4e39f379ec5b63c5ed}{rife\+E\+T\+D\+F\+L\+\_\+n8\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 8 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gab5abfd95bd217f3aeee8a4392de84ffb}{rife\+E\+T\+D\+F\+L\+\_\+n9\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 9 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga5f3dfec0489930008bea04972ad70838}{rife\+E\+T\+D\+F\+L\+\_\+n0\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n 0 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gafa5494b684a10f3d2a88ed244803a5ba}{rife\+E\+T\+D\+F\+L\+\_\+n\+C\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl botao tecla n c pop (limpa/cancela) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaf26b885c1cd6738aa3665f7e5827c98a}{rife\+E\+T\+D\+F\+L\+\_\+numero\+Protocolo\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife etdfl numero protocolo pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga2c8f8fca85de1ad84c45b7aa2f20a661}{zappic\+Prot\+\_\+1\+K\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, Zappicator de 1 K\+Hz botao pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga4fff75c13b440d9fd33441059806ed91}{zappic\+Prot\+\_\+2\+K5\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the zappic prot 2.\+5 K\+Hz botao pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaebb64c00b6c08f69a1424405e05d6f50}{zappic\+Prot\+\_\+428\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the zappic prot 428 Hz botao pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gacf956f951eb86d502cd4ed62d164a40a}{zappic\+Prot\+\_\+529\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the zappic prot 529 Hz botao pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaad49504707cd07fb7174a720903b4cac}{rife\+Manual\+\_\+n1\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, rife manual botao n1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga3ed5afbadfc7d2d4eba27d23b9fb1cfd}{rife\+Manual\+\_\+n2\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 2 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga7930e8c0a34b32c9f838964c4d990fd2}{rife\+Manual\+\_\+n3\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 3 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga38a33407cc65746ba19888ca214ebe38}{rife\+Manual\+\_\+n4\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 4 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaaba7dea5d67384edb3623e8a712cdf0d}{rife\+Manual\+\_\+n5\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 5 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gae94017ff6c1657b6f30c358517515519}{rife\+Manual\+\_\+n6\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 6 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga3750d9288844c475d7df38d72cf04930}{rife\+Manual\+\_\+n7\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 7 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gaf972bc3898108dc956ac6a250a594424}{rife\+Manual\+\_\+n8\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 8 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gae4ca22aa71971dfe32d2dd2654a14482}{rife\+Manual\+\_\+n9\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 9 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga1c4424db19e9af7e504afbc7094ffdd0}{rife\+Manual\+\_\+n0\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n 0 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga8be9dd2f8c72426a842bcb09fc67936d}{rife\+Manual\+\_\+n\+C\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual botao n c pop (cancela/limpa) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gab4b82ca877e83eea32827eb26916ffb3}{rife\+Manual\+\_\+freq01\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le frequency 01 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_gad88eec4106a1cdfb0f191bf09dcdecaa}{rife\+Manual\+\_\+freq02\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le frequency 02 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga61c8770e5965983fb86577c04ab195ab}{rife\+Manual\+\_\+freq03\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le frequency 03 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga748dad8b646aa5342f25614e9e3404c1}{rife\+Manual\+\_\+freq04\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le frequency 04 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga71717ba484a052c78f5cf7b01871694b}{rife\+Manual\+\_\+freq05\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le frequency 05 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga94f93cc2967ace19238ee5257af96351}{rife\+Manual\+\_\+freq06\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le frequency 06 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga7f6867e044c659c5059a3c80d1026e99}{rife\+Manual\+\_\+dura01\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le duracao 01 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga73e5271f8d4f960be62bbf1cb65bef2e}{rife\+Manual\+\_\+dura02\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le duracao 02 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga786760ae48e12fc2d442049d875244cb}{rife\+Manual\+\_\+dura03\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le duracao 03 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga0cdcd9deb3183345245c293b74cd4473}{rife\+Manual\+\_\+dura04\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le duracao 04 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga8d6c3ad1a7a575ba6da567f9be44d653}{rife\+Manual\+\_\+dura05\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le duracao 05 pop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___nextion_ga169cd52bb4ff1a534f73d90e13692a9a}{rife\+Manual\+\_\+dura06\+Pop\+Callback}} (void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Callback, called when the rife manual le duracao 06 pop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_ab6e8526e4975f495321939d310c02c86}{D\+E\+B\+U\+G\+A\+N\+DO}} = true
+\begin{DoxyCompactList}\small\item\em Variavel Global -\/ boolean true indica que debug habilitado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_adafruit___i_n_a219}{Adafruit\+\_\+\+I\+N\+A219}} \mbox{\hyperlink{group___ina219_ga69393b86406e49dbacfbabd283877495}{ina219}}
+\begin{DoxyCompactList}\small\item\em cria instancia do I\+N\+A219 -\/ \mbox{\hyperlink{class_adafruit___i_n_a219}{Adafruit\+\_\+\+I\+N\+A219}} ina219 \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{group___ina219_ga578f989ad06826b324d1b967152fc424}{tempo\+Ina219\+Rasc}} = 0
+\begin{DoxyCompactList}\small\item\em unsigned long, rascunho de tempo-\/timer do Ina219 \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{group___ina219_ga4355ce04a0249943875c3986a99e1f7c}{n\+\_\+ina}} = 0
+\begin{DoxyCompactList}\small\item\em rascunho de valor do ina219 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___ina219_ga048baae7540f2d3f654db2e9d1024f27}{media\+Volts}} = 0
+\begin{DoxyCompactList}\small\item\em media de volts medidos/lidos \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___ina219_gabfc2ba30a59fa1ceb41a60667ebc5099}{media\+Amperes}} = 0
+\begin{DoxyCompactList}\small\item\em media de amperes medidos/lidos \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___ina219_gaf6a7a0cdcb48861bfb423c0df0dee34d}{acc\+Volts}} = 0
+\begin{DoxyCompactList}\small\item\em acumulado de volts \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___ina219_ga81033b6412d7eb8a8f24f45f7d52f42f}{acc\+Amperes}} = 0
+\begin{DoxyCompactList}\small\item\em acumulado de amperes \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___ina219_gabe9c3fa3a5f87dcf79e8252a6d08d0ed}{para\+Leitura}} = false
+\begin{DoxyCompactList}\small\item\em para temporariamente leitura \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_aa70ee90da9be0bcf68ad5e967e226b8e}\label{_e_s_p32__zapper_v9_80_8ino_aa70ee90da9be0bcf68ad5e967e226b8e}} 
+int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_aa70ee90da9be0bcf68ad5e967e226b8e}{buffer\+\_\+itens}} = 50
+\begin{DoxyCompactList}\small\item\em numero de itens (tamanho) do buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a2b128cad4cc0b548f9256e69168ee2b4}\label{_e_s_p32__zapper_v9_80_8ino_a2b128cad4cc0b548f9256e69168ee2b4}} 
+int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a2b128cad4cc0b548f9256e69168ee2b4}{buffer\+\_\+v}} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em o buffer\+\_\+v\mbox{[} 50\mbox{]} buffer de 50 posicoes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_abd494b56c58f8556332e72d5a21a8e0d}\label{_e_s_p32__zapper_v9_80_8ino_abd494b56c58f8556332e72d5a21a8e0d}} 
+unsigned int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_abd494b56c58f8556332e72d5a21a8e0d}{segundos}}
+\begin{DoxyCompactList}\small\item\em para relogio, timer e temporizadores \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a168f72580667f1889a6bfc805b24bb7f}\label{_e_s_p32__zapper_v9_80_8ino_a168f72580667f1889a6bfc805b24bb7f}} 
+unsigned int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a168f72580667f1889a6bfc805b24bb7f}{minutos}}
+\begin{DoxyCompactList}\small\item\em para relogio, timer e temporizadores \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a68fbf049741aa41c9dac98cc189e07f9}\label{_e_s_p32__zapper_v9_80_8ino_a68fbf049741aa41c9dac98cc189e07f9}} 
+unsigned int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a68fbf049741aa41c9dac98cc189e07f9}{horas}}
+\begin{DoxyCompactList}\small\item\em para relogio, timer e temporizadores \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a196820126c7395149b7056d5a08073f2}\label{_e_s_p32__zapper_v9_80_8ino_a196820126c7395149b7056d5a08073f2}} 
+unsigned int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a196820126c7395149b7056d5a08073f2}{n7}}
+\begin{DoxyCompactList}\small\item\em para relogio, timer e temporizadores \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a0e28289f24ea58662308674b6d11bec2}\label{_e_s_p32__zapper_v9_80_8ino_a0e28289f24ea58662308674b6d11bec2}} 
+unsigned long \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a0e28289f24ea58662308674b6d11bec2}{tempo\+Agora}} = 0
+\begin{DoxyCompactList}\small\item\em tempo agora \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_abb9a2420204c94002e9c1a6162dcc4a6}\label{_e_s_p32__zapper_v9_80_8ino_abb9a2420204c94002e9c1a6162dcc4a6}} 
+unsigned long \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_abb9a2420204c94002e9c1a6162dcc4a6}{tempo\+Antes}} = 0
+\begin{DoxyCompactList}\small\item\em tempo antes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_ad97fc2d0debad4ff0255f7e9f6ef0a68}\label{_e_s_p32__zapper_v9_80_8ino_ad97fc2d0debad4ff0255f7e9f6ef0a68}} 
+unsigned long \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_ad97fc2d0debad4ff0255f7e9f6ef0a68}{tempo\+Inicial}}
+\begin{DoxyCompactList}\small\item\em rascunho de tempo no momento que foi ligado/desligado \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_ab8b00f6bf8b25f23c0c79a6b302b2f5c}\label{_e_s_p32__zapper_v9_80_8ino_ab8b00f6bf8b25f23c0c79a6b302b2f5c}} 
+unsigned long \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_ab8b00f6bf8b25f23c0c79a6b302b2f5c}{tempo\+Segundos}}
+\begin{DoxyCompactList}\small\item\em tempo em segundos \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___nextion_gaa5754969bfc38a289d67f0bb4a73d953}{buffer\+Nextion}} \mbox{[}90\mbox{]}
+\begin{DoxyCompactList}\small\item\em buffer de comunicacao do-\/para N\+E\+X\+T\+I\+ON \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___nextion_gaf36df6991caa0418fb0648700817aa9e}{barra\+Nextion\+Rasc}}
+\begin{DoxyCompactList}\small\item\em variavel da barra (p/incre-\/decre-\/mentar) do Nextion \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___nextion_gab66ed8e0098c0a86b458672a55a9cca9}{k}}
+\begin{DoxyCompactList}\small\item\em int K do processo -\/ contador \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___nextion_ga62454e9f8e5786a8cc31a2aaee1d519a}{tam\+Comando}}
+\begin{DoxyCompactList}\small\item\em tamanho do telegrama-\/comando Nextion \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___nextion_ga0609f0fca7fc9754817ab60ecf797e81}{buffer\+Nextion\+Rasc}} \mbox{[}20\mbox{]}
+\begin{DoxyCompactList}\small\item\em buffer rascunho/buffer de tx-\/rx Nextion \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___protocolos_gaaecc1eb09af795b1094b8526a3b40b89}{em\+Programa}} = false
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ flag de em programa de Rife, Clark, Zappicator \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___protocolos_ga907b1ed93d1bbdb9814f33bee524680a}{qual\+Programa}} = 0
+\begin{DoxyCompactList}\small\item\em identifica programa, 1-\/clark, 2-\/zappic, 3-\/rife, etc) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___protocolos_ga98be2ea7f9227e0352400defee018967}{estagio}} = 0
+\begin{DoxyCompactList}\small\item\em indica em que estagio esta -\/ qual par de frequencias \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___protocolos_ga0eda7d75716f4671cab2b9b951fd6a3d}{quantos\+Estagios}} = 0
+\begin{DoxyCompactList}\small\item\em indica quantos estagios-\/fases tem o protocolo \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___protocolos_gae2a68c0975174c5d78a34515e19d63dc}{pwm\+Frequencia}} = 0
+\begin{DoxyCompactList}\small\item\em indica a (pwm) frequencia \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group___protocolos_gadd5221743d7cc481ab31b0520d427c23}{pwm\+Duracao}} = 0
+\begin{DoxyCompactList}\small\item\em indica (pwm) a duracao do protocolo-\/fase-\/estagio \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___protocolos_ga654659e96d18ffcf3ec910b9c5e4adf8}{primeira\+Vez}} = true
+\begin{DoxyCompactList}\small\item\em indica se comecou(1 vez) C\+L\+A\+RK \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{group___protocolos_gab90cb7393f65040510a15d32da8e7ca9}{protocolo\+Antes\+Rasc}}
+\begin{DoxyCompactList}\small\item\em do protocolo C\+L\+A\+RK antes rascunho \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{group___protocolos_ga9662531b74ced5a3b51760526dda72c5}{protocolo\+Segundos\+Total}} = 0
+\begin{DoxyCompactList}\small\item\em do protocolo C\+L\+A\+RK contador segundos total \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{group___protocolos_ga456b6fd80101b7ea16950c866f09a07e}{protocolo\+Segundos}} = 0
+\begin{DoxyCompactList}\small\item\em do protocolo C\+L\+A\+RK contador segundos \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___protocolos_ga76d261dae96f54c726b098788f4db920}{qual\+Rife}} = 1
+\begin{DoxyCompactList}\small\item\em indica qual protocolo Rife \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___protocolos_ga12d95ed90b34c10e7b6c1408c2c91382}{frequencia\+Rasc}} \mbox{[}7\mbox{]}
+\begin{DoxyCompactList}\small\item\em Operacao Manual (Rife) tabela de rascunho das frequencias. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___protocolos_ga3d4c0ddd9b5c458fcc86cbffff43f6fd}{duracao\+Rasc}} \mbox{[}7\mbox{]}
+\begin{DoxyCompactList}\small\item\em Operacao Manual (Rife) tabela de duracao das frequencias. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a8b57212005bee1f3bd0845839734064b}\label{_e_s_p32__zapper_v9_80_8ino_a8b57212005bee1f3bd0845839734064b}} 
+const unsigned long \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a8b57212005bee1f3bd0845839734064b}{intervalo\+Leitura\+Ina219}} = 10000
+\begin{DoxyCompactList}\small\item\em intervalo (de 10 seg). em milissegundos de leitura do ina219 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_af4834ab475ff30a885b33ca9cf58090c}\label{_e_s_p32__zapper_v9_80_8ino_af4834ab475ff30a885b33ca9cf58090c}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_af4834ab475ff30a885b33ca9cf58090c}{liga}} = H\+I\+GH
+\begin{DoxyCompactList}\small\item\em constante de acao liga (H\+I\+GH -\/$>$ liga) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a86ca91b58e48a906ecae22ee85312d40}\label{_e_s_p32__zapper_v9_80_8ino_a86ca91b58e48a906ecae22ee85312d40}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a86ca91b58e48a906ecae22ee85312d40}{desliga}} = L\+OW
+\begin{DoxyCompactList}\small\item\em constante de acao desliga (L\+OW -\/$>$ desliga) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_afa3a8d61853e945b4689cd40418d2cb0}\label{_e_s_p32__zapper_v9_80_8ino_afa3a8d61853e945b4689cd40418d2cb0}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_afa3a8d61853e945b4689cd40418d2cb0}{buzina}} = 4
+\begin{DoxyCompactList}\small\item\em constante bit buzina = 4 ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a1c61958c9bfc77332ab1b1cb530d15b5}\label{_e_s_p32__zapper_v9_80_8ino_a1c61958c9bfc77332ab1b1cb530d15b5}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a1c61958c9bfc77332ab1b1cb530d15b5}{clark}} = 1
+\begin{DoxyCompactList}\small\item\em Protocolo Clark 30K\+Hz =$>$ 7m-\/20m-\/7m-\/20m-\/7m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_aebe14f3cb11f148d75ea9c7154b304fd}\label{_e_s_p32__zapper_v9_80_8ino_aebe14f3cb11f148d75ea9c7154b304fd}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_aebe14f3cb11f148d75ea9c7154b304fd}{rife\+Pre}} = 3
+\begin{DoxyCompactList}\small\item\em Rife prca-\/definidos (3 exemplos) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_ad6585786288dda076bff2d64d27b8c5d}\label{_e_s_p32__zapper_v9_80_8ino_ad6585786288dda076bff2d64d27b8c5d}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_ad6585786288dda076bff2d64d27b8c5d}{zapp}} = 2
+\begin{DoxyCompactList}\small\item\em Z\+A\+P\+P\+I\+C\+A\+T\+OR (padrao ca 1K\+HZ durante 30m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a77ea4b32c824bec9de2d9a392cb08360}\label{_e_s_p32__zapper_v9_80_8ino_a77ea4b32c824bec9de2d9a392cb08360}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a77ea4b32c824bec9de2d9a392cb08360}{rife\+E\+T\+D\+FL}} = 4
+\begin{DoxyCompactList}\small\item\em Rife entrando Numero do Protocolo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_aba882412dabe4aa311d7744c5658eb64}\label{_e_s_p32__zapper_v9_80_8ino_aba882412dabe4aa311d7744c5658eb64}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_aba882412dabe4aa311d7744c5658eb64}{rife\+Manual}} = 5
+\begin{DoxyCompactList}\small\item\em digitando frequencias e duracao (atca 6 freq.) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a1f7c599c5db8428b07f07d96f0149db4}\label{_e_s_p32__zapper_v9_80_8ino_a1f7c599c5db8428b07f07d96f0149db4}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a1f7c599c5db8428b07f07d96f0149db4}{maximo\+Rife}} = 268
+\begin{DoxyCompactList}\small\item\em e o numero de protocolos existentes na tabela tabela\+\_\+rife.\+h \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a06e5c5b68c89d35ea724a2647a8fc3e4}\label{_e_s_p32__zapper_v9_80_8ino_a06e5c5b68c89d35ea724a2647a8fc3e4}} 
+const uint8\+\_\+t \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a06e5c5b68c89d35ea724a2647a8fc3e4}{freq\+\_\+var\+\_\+canal}} = 0
+\begin{DoxyCompactList}\small\item\em constantes no E\+S\+P32 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a9876108819956f98c80bc5e0966f4436}\label{_e_s_p32__zapper_v9_80_8ino_a9876108819956f98c80bc5e0966f4436}} 
+const uint8\+\_\+t \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a9876108819956f98c80bc5e0966f4436}{freq\+\_\+1\+K\+\_\+canal}} = 1
+\begin{DoxyCompactList}\small\item\em uint8\+\_\+t frequency 1 k canal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a3fda26eba326a0c7b401680f5fe90b42}\label{_e_s_p32__zapper_v9_80_8ino_a3fda26eba326a0c7b401680f5fe90b42}} 
+const uint8\+\_\+t \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a3fda26eba326a0c7b401680f5fe90b42}{buz\+\_\+canal}} = 2
+\begin{DoxyCompactList}\small\item\em uint8\+\_\+t buz canal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a1589027fc295e6ddc8ba773548f1b7f1}\label{_e_s_p32__zapper_v9_80_8ino_a1589027fc295e6ddc8ba773548f1b7f1}} 
+const uint8\+\_\+t \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a1589027fc295e6ddc8ba773548f1b7f1}{duty\+\_\+todos}} = 1
+\begin{DoxyCompactList}\small\item\em uint8\+\_\+t 50\% duty cycle para todos$>$1000Hz \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_acb5aae321b6054b9df1ad66d6e91c077}\label{_e_s_p32__zapper_v9_80_8ino_acb5aae321b6054b9df1ad66d6e91c077}} 
+const uint8\+\_\+t \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_acb5aae321b6054b9df1ad66d6e91c077}{duty\+\_\+baixo}} = 8
+\begin{DoxyCompactList}\small\item\em uint8\+\_\+t 8 bits =$>$256 p/freq baixas \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_ae563b3f53418c1775b3eea2f7761aeb7}\label{_e_s_p32__zapper_v9_80_8ino_ae563b3f53418c1775b3eea2f7761aeb7}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_ae563b3f53418c1775b3eea2f7761aeb7}{clark\+\_\+rife}} = 27
+\begin{DoxyCompactList}\small\item\em int clark rife \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_af20d710dfc20d6c511718c794ac87e7e}\label{_e_s_p32__zapper_v9_80_8ino_af20d710dfc20d6c511718c794ac87e7e}} 
+const int \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_af20d710dfc20d6c511718c794ac87e7e}{zappicator}} = 26
+\begin{DoxyCompactList}\small\item\em int zappicator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a3a82d1fc29555d54e6f54c5530e6ebf4}\label{_e_s_p32__zapper_v9_80_8ino_a3a82d1fc29555d54e6f54c5530e6ebf4}} 
+const uint32\+\_\+t \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a3a82d1fc29555d54e6f54c5530e6ebf4}{freq\+\_\+inicial}} = 1000
+\begin{DoxyCompactList}\small\item\em freq. Inicial =$>$ 1K\+Hz \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a8d76301af00f313f9b40201ccf3288d3}\label{_e_s_p32__zapper_v9_80_8ino_a8d76301af00f313f9b40201ccf3288d3}} 
+uint32\+\_\+t \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a8d76301af00f313f9b40201ccf3288d3}{freq\+\_\+var}} = 0
+\begin{DoxyCompactList}\small\item\em uint32\+\_\+t frequencia variavel de rascunho \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a8ed862e9b0e19887679106ed465ca189}{tab\+\_\+clark}} \mbox{[}11\mbox{]} = \{ 5,30000,420,0,1200,30000,420,0,1200,30000,420 \}
+\begin{DoxyCompactList}\small\item\em linha da C\+L\+A\+RK \{n,x,y,x,y,x,y,.....\} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a664e276e8e5bbe4c972fde48e61053cf}\label{_e_s_p32__zapper_v9_80_8ino_a664e276e8e5bbe4c972fde48e61053cf}} 
+const float \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a664e276e8e5bbe4c972fde48e61053cf}{tab\+\_\+clark\+TT}} \mbox{[}11\mbox{]} = \{ 5,30000,7,0,20,30000,7,0,20,30000,7 \}
+\begin{DoxyCompactList}\small\item\em T\+E\+S\+TE C\+L\+A\+RK -\/ tempo reduzido para alguns segundos. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_a56763c25243d83f1797bfad63dd3aec0}{tab\+\_\+zappic}} \mbox{[}3\mbox{]} = \{ 1,1000,900 \}
+\begin{DoxyCompactList}\small\item\em linha da zappicator \{n, x,y,x,y,x,y,.....\} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_acd6bf00cea0d69de0ab5e6aaeb83d49a}\label{_e_s_p32__zapper_v9_80_8ino_acd6bf00cea0d69de0ab5e6aaeb83d49a}} 
+const float \mbox{\hyperlink{_e_s_p32__zapper_v9_80_8ino_acd6bf00cea0d69de0ab5e6aaeb83d49a}{tab\+\_\+zappic\+TT}} \mbox{[}3\mbox{]} = \{ 1,1000,10 \}
+\begin{DoxyCompactList}\small\item\em T\+E\+S\+TE Z\+A\+P\+P\+I\+C\+A\+T\+OR. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a5bf3b134d0001f77036ea348c3ca0f7a}\label{_e_s_p32__zapper_v9_80_8ino_a5bf3b134d0001f77036ea348c3ca0f7a}} 
+const float {\bfseries tab\+\_\+zappic\+T\+T1} \mbox{[}3\mbox{]} = \{ 1,1000,10 \}
+\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a7cc165dbe18d676e3398507392835264}\label{_e_s_p32__zapper_v9_80_8ino_a7cc165dbe18d676e3398507392835264}} 
+const float {\bfseries tab\+\_\+zappic\+T\+T2} \mbox{[}3\mbox{]} = \{ 1,2500,10 \}
+\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a72ccfa4847dde8b1042fdad5d840c1c9}\label{_e_s_p32__zapper_v9_80_8ino_a72ccfa4847dde8b1042fdad5d840c1c9}} 
+const float {\bfseries tab\+\_\+zappic\+T\+T3} \mbox{[}3\mbox{]} = \{ 1,428,10 \}
+\item 
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a60cb7ba65657b1ad0099005c02bd6b1e}\label{_e_s_p32__zapper_v9_80_8ino_a60cb7ba65657b1ad0099005c02bd6b1e}} 
+const float {\bfseries tab\+\_\+zappic\+T\+T4} \mbox{[}3\mbox{]} = \{ 1,529,10 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modulo Esp32-\/zapper v 9.\+0 funcoes de tratamento do P\+WM para zapper, clark, rife, zappicator. funcoes da tela H\+MI -\/ Nextion. funcoes de leitura do I\+N\+A219 -\/ sensor tensao e corrente. 
+
+\begin{DoxyAuthor}{Author}
+M\+L\+TF 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17/07/2018 -\/ 10/12/2019 
+\end{DoxyDate}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_ab6e8526e4975f495321939d310c02c86}\label{_e_s_p32__zapper_v9_80_8ino_ab6e8526e4975f495321939d310c02c86}} 
+\index{ESP32\_zapperV9.0.ino@{ESP32\_zapperV9.0.ino}!DEBUGANDO@{DEBUGANDO}}
+\index{DEBUGANDO@{DEBUGANDO}!ESP32\_zapperV9.0.ino@{ESP32\_zapperV9.0.ino}}
+\doxysubsubsection{\texorpdfstring{DEBUGANDO}{DEBUGANDO}}
+{\footnotesize\ttfamily bool D\+E\+B\+U\+G\+A\+N\+DO = true}
+
+
+
+Variavel Global -\/ boolean true indica que debug habilitado. 
+
+~\newline
+ \mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a8ed862e9b0e19887679106ed465ca189}\label{_e_s_p32__zapper_v9_80_8ino_a8ed862e9b0e19887679106ed465ca189}} 
+\index{ESP32\_zapperV9.0.ino@{ESP32\_zapperV9.0.ino}!tab\_clark@{tab\_clark}}
+\index{tab\_clark@{tab\_clark}!ESP32\_zapperV9.0.ino@{ESP32\_zapperV9.0.ino}}
+\doxysubsubsection{\texorpdfstring{tab\_clark}{tab\_clark}}
+{\footnotesize\ttfamily const float tab\+\_\+clark\mbox{[}11\mbox{]} = \{ 5,30000,420,0,1200,30000,420,0,1200,30000,420 \}}
+
+
+
+linha da C\+L\+A\+RK \{n,x,y,x,y,x,y,.....\} 
+
+\mbox{\Hypertarget{_e_s_p32__zapper_v9_80_8ino_a56763c25243d83f1797bfad63dd3aec0}\label{_e_s_p32__zapper_v9_80_8ino_a56763c25243d83f1797bfad63dd3aec0}} 
+\index{ESP32\_zapperV9.0.ino@{ESP32\_zapperV9.0.ino}!tab\_zappic@{tab\_zappic}}
+\index{tab\_zappic@{tab\_zappic}!ESP32\_zapperV9.0.ino@{ESP32\_zapperV9.0.ino}}
+\doxysubsubsection{\texorpdfstring{tab\_zappic}{tab\_zappic}}
+{\footnotesize\ttfamily const float tab\+\_\+zappic\mbox{[}3\mbox{]} = \{ 1,1000,900 \}}
+
+
+
+linha da zappicator \{n, x,y,x,y,x,y,.....\} 
+

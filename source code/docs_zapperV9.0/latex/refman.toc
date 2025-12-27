@@ -1,0 +1,155 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Adafruit I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A219 current/power monitor IC}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Author}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}License}{1}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Adafruit I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A219 Library $<$a href=\char `\"{}https\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}://travis-\/ci.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}org/adafruit/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Adafruit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A219\char `\"{}$>$$<$img src=\char `\"{}https\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}://travis-\/ci.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}org/adafruit/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Adafruit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A219.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}svg?branch=master\char `\"{} alt=\char `\"{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Build Status\char `\"{}/$>$$<$/a$>$}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Compatibility}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Module Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Modules}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Module Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sistema-\/hardware}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{12}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}avisaXseg()}{12}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}daBeep()}{12}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}dbgMostraDados()}{13}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}desligaPWM()}{13}{subsubsection.6.1.2.4}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}desligaPWMZ()}{13}{subsubsection.6.1.2.5}%
+\contentsline {subsubsection}{\numberline {6.1.2.6}iniciaDebug()}{14}{subsubsection.6.1.2.6}%
+\contentsline {subsubsection}{\numberline {6.1.2.7}iniciaPWMs()}{14}{subsubsection.6.1.2.7}%
+\contentsline {subsubsection}{\numberline {6.1.2.8}ligaPWM()}{14}{subsubsection.6.1.2.8}%
+\contentsline {subsubsection}{\numberline {6.1.2.9}ligaPWMZ()}{15}{subsubsection.6.1.2.9}%
+\contentsline {subsubsection}{\numberline {6.1.2.10}loop()}{15}{subsubsection.6.1.2.10}%
+\contentsline {subsubsection}{\numberline {6.1.2.11}setup()}{16}{subsubsection.6.1.2.11}%
+\contentsline {subsubsection}{\numberline {6.1.2.12}terminaPrograma()}{16}{subsubsection.6.1.2.12}%
+\contentsline {subsubsection}{\numberline {6.1.2.13}terminaProgramaZ()}{16}{subsubsection.6.1.2.13}%
+\contentsline {subsubsection}{\numberline {6.1.2.14}tickRelogio()}{17}{subsubsection.6.1.2.14}%
+\contentsline {section}{\numberline {6.2}Rife-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Clark-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Zappicator}{18}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{19}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Function Documentation}{20}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}avancaBarraClark()}{20}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}avancaBarraRifeETDFL()}{20}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}avancaBarraRifeManual()}{20}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}avancaBarraRifePre()}{21}{subsubsection.6.2.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.2.5}avancaBarraZapp()}{21}{subsubsection.6.2.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.2.6}clark\_20min()}{21}{subsubsection.6.2.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.2.7}clark\_7min()}{22}{subsubsection.6.2.2.7}%
+\contentsline {subsubsection}{\numberline {6.2.2.8}comecaClark()}{22}{subsubsection.6.2.2.8}%
+\contentsline {subsubsection}{\numberline {6.2.2.9}comecaRifeETDFL()}{22}{subsubsection.6.2.2.9}%
+\contentsline {subsubsection}{\numberline {6.2.2.10}comecaRifeManual()}{23}{subsubsection.6.2.2.10}%
+\contentsline {subsubsection}{\numberline {6.2.2.11}comecaRifePre()}{23}{subsubsection.6.2.2.11}%
+\contentsline {subsubsection}{\numberline {6.2.2.12}comecaZappic()}{24}{subsubsection.6.2.2.12}%
+\contentsline {subsubsection}{\numberline {6.2.2.13}controleRifeETDFL()}{24}{subsubsection.6.2.2.13}%
+\contentsline {subsubsection}{\numberline {6.2.2.14}controleRifeManual()}{25}{subsubsection.6.2.2.14}%
+\contentsline {subsubsection}{\numberline {6.2.2.15}controleRifePre()}{25}{subsubsection.6.2.2.15}%
+\contentsline {subsubsection}{\numberline {6.2.2.16}controleZappic()}{25}{subsubsection.6.2.2.16}%
+\contentsline {subsubsection}{\numberline {6.2.2.17}limpaStatus()}{25}{subsubsection.6.2.2.17}%
+\contentsline {subsubsection}{\numberline {6.2.2.18}proximoParClark()}{26}{subsubsection.6.2.2.18}%
+\contentsline {subsubsection}{\numberline {6.2.2.19}proximoRifeETDFL()}{26}{subsubsection.6.2.2.19}%
+\contentsline {subsubsection}{\numberline {6.2.2.20}proximoRifeManual()}{26}{subsubsection.6.2.2.20}%
+\contentsline {subsubsection}{\numberline {6.2.2.21}proximoRifePre()}{26}{subsubsection.6.2.2.21}%
+\contentsline {subsubsection}{\numberline {6.2.2.22}tempoLeAgora()}{27}{subsubsection.6.2.2.22}%
+\contentsline {subsubsection}{\numberline {6.2.2.23}tempoMarcaInicio()}{27}{subsubsection.6.2.2.23}%
+\contentsline {section}{\numberline {6.3}Interface-\/com-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ina219}{28}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{28}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Function Documentation}{28}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}dbgMostraIna219()}{29}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}iniciaINA219()}{29}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}leINA219()}{29}{subsubsection.6.3.2.3}%
+\contentsline {subsection}{\numberline {6.3.3}Variable Documentation}{30}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}accAmperes}{30}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}accVolts}{30}{subsubsection.6.3.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.3}mediaVolts}{30}{subsubsection.6.3.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.4}n\_ina}{30}{subsubsection.6.3.3.4}%
+\contentsline {section}{\numberline {6.4}Nextion-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}H\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Display}{31}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{33}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Function Documentation}{33}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}clarkProt\_cancelarPopCallback()}{33}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}clarkProt\_iniciarPopCallback()}{34}{subsubsection.6.4.2.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.3}preparaRifeBichoX()}{34}{subsubsection.6.4.2.3}%
+\contentsline {subsubsection}{\numberline {6.4.2.4}rifeETDFL\_cancelarPopCallback()}{35}{subsubsection.6.4.2.4}%
+\contentsline {subsubsection}{\numberline {6.4.2.5}rifeETDFL\_iniciarPopCallback()}{35}{subsubsection.6.4.2.5}%
+\contentsline {subsubsection}{\numberline {6.4.2.6}rifeETDFL\_n0PopCallback()}{35}{subsubsection.6.4.2.6}%
+\contentsline {subsubsection}{\numberline {6.4.2.7}rifeETDFL\_n1PopCallback()}{36}{subsubsection.6.4.2.7}%
+\contentsline {subsubsection}{\numberline {6.4.2.8}rifeETDFL\_n2PopCallback()}{36}{subsubsection.6.4.2.8}%
+\contentsline {subsubsection}{\numberline {6.4.2.9}rifeETDFL\_n3PopCallback()}{36}{subsubsection.6.4.2.9}%
+\contentsline {subsubsection}{\numberline {6.4.2.10}rifeETDFL\_n4PopCallback()}{37}{subsubsection.6.4.2.10}%
+\contentsline {subsubsection}{\numberline {6.4.2.11}rifeETDFL\_n5PopCallback()}{37}{subsubsection.6.4.2.11}%
+\contentsline {subsubsection}{\numberline {6.4.2.12}rifeETDFL\_n6PopCallback()}{37}{subsubsection.6.4.2.12}%
+\contentsline {subsubsection}{\numberline {6.4.2.13}rifeETDFL\_n7PopCallback()}{38}{subsubsection.6.4.2.13}%
+\contentsline {subsubsection}{\numberline {6.4.2.14}rifeETDFL\_n8PopCallback()}{38}{subsubsection.6.4.2.14}%
+\contentsline {subsubsection}{\numberline {6.4.2.15}rifeETDFL\_n9PopCallback()}{38}{subsubsection.6.4.2.15}%
+\contentsline {subsubsection}{\numberline {6.4.2.16}rifeETDFL\_nCPopCallback()}{39}{subsubsection.6.4.2.16}%
+\contentsline {subsubsection}{\numberline {6.4.2.17}rifeETDFL\_numeroProtocoloPopCallback()}{39}{subsubsection.6.4.2.17}%
+\contentsline {subsubsection}{\numberline {6.4.2.18}rifeETDFL\_okPopCallback()}{40}{subsubsection.6.4.2.18}%
+\contentsline {subsubsection}{\numberline {6.4.2.19}rifeManual\_cancelarPopCallback()}{40}{subsubsection.6.4.2.19}%
+\contentsline {subsubsection}{\numberline {6.4.2.20}rifeManual\_dura01PopCallback()}{40}{subsubsection.6.4.2.20}%
+\contentsline {subsubsection}{\numberline {6.4.2.21}rifeManual\_dura02PopCallback()}{41}{subsubsection.6.4.2.21}%
+\contentsline {subsubsection}{\numberline {6.4.2.22}rifeManual\_dura03PopCallback()}{41}{subsubsection.6.4.2.22}%
+\contentsline {subsubsection}{\numberline {6.4.2.23}rifeManual\_dura04PopCallback()}{41}{subsubsection.6.4.2.23}%
+\contentsline {subsubsection}{\numberline {6.4.2.24}rifeManual\_dura05PopCallback()}{42}{subsubsection.6.4.2.24}%
+\contentsline {subsubsection}{\numberline {6.4.2.25}rifeManual\_dura06PopCallback()}{42}{subsubsection.6.4.2.25}%
+\contentsline {subsubsection}{\numberline {6.4.2.26}rifeManual\_freq01PopCallback()}{42}{subsubsection.6.4.2.26}%
+\contentsline {subsubsection}{\numberline {6.4.2.27}rifeManual\_freq02PopCallback()}{43}{subsubsection.6.4.2.27}%
+\contentsline {subsubsection}{\numberline {6.4.2.28}rifeManual\_freq03PopCallback()}{43}{subsubsection.6.4.2.28}%
+\contentsline {subsubsection}{\numberline {6.4.2.29}rifeManual\_freq04PopCallback()}{43}{subsubsection.6.4.2.29}%
+\contentsline {subsubsection}{\numberline {6.4.2.30}rifeManual\_freq05PopCallback()}{44}{subsubsection.6.4.2.30}%
+\contentsline {subsubsection}{\numberline {6.4.2.31}rifeManual\_freq06PopCallback()}{44}{subsubsection.6.4.2.31}%
+\contentsline {subsubsection}{\numberline {6.4.2.32}rifeManual\_iniciarPopCallback()}{45}{subsubsection.6.4.2.32}%
+\contentsline {subsubsection}{\numberline {6.4.2.33}rifeManual\_n0PopCallback()}{45}{subsubsection.6.4.2.33}%
+\contentsline {subsubsection}{\numberline {6.4.2.34}rifeManual\_n1PopCallback()}{45}{subsubsection.6.4.2.34}%
+\contentsline {subsubsection}{\numberline {6.4.2.35}rifeManual\_n2PopCallback()}{46}{subsubsection.6.4.2.35}%
+\contentsline {subsubsection}{\numberline {6.4.2.36}rifeManual\_n3PopCallback()}{46}{subsubsection.6.4.2.36}%
+\contentsline {subsubsection}{\numberline {6.4.2.37}rifeManual\_n4PopCallback()}{46}{subsubsection.6.4.2.37}%
+\contentsline {subsubsection}{\numberline {6.4.2.38}rifeManual\_n5PopCallback()}{47}{subsubsection.6.4.2.38}%
+\contentsline {subsubsection}{\numberline {6.4.2.39}rifeManual\_n6PopCallback()}{47}{subsubsection.6.4.2.39}%
+\contentsline {subsubsection}{\numberline {6.4.2.40}rifeManual\_n7PopCallback()}{47}{subsubsection.6.4.2.40}%
+\contentsline {subsubsection}{\numberline {6.4.2.41}rifeManual\_n8PopCallback()}{48}{subsubsection.6.4.2.41}%
+\contentsline {subsubsection}{\numberline {6.4.2.42}rifeManual\_n9PopCallback()}{48}{subsubsection.6.4.2.42}%
+\contentsline {subsubsection}{\numberline {6.4.2.43}rifeManual\_nCPopCallback()}{48}{subsubsection.6.4.2.43}%
+\contentsline {subsubsection}{\numberline {6.4.2.44}rifePre\_bicho1PopCallback()}{49}{subsubsection.6.4.2.44}%
+\contentsline {subsubsection}{\numberline {6.4.2.45}rifePre\_bicho2PopCallback()}{49}{subsubsection.6.4.2.45}%
+\contentsline {subsubsection}{\numberline {6.4.2.46}rifePre\_bicho3PopCallback()}{50}{subsubsection.6.4.2.46}%
+\contentsline {subsubsection}{\numberline {6.4.2.47}rifePre\_cancelarPopCallback()}{50}{subsubsection.6.4.2.47}%
+\contentsline {subsubsection}{\numberline {6.4.2.48}rifePre\_iniciarPopCallback()}{50}{subsubsection.6.4.2.48}%
+\contentsline {subsubsection}{\numberline {6.4.2.49}zappicProt\_1KPopCallback()}{51}{subsubsection.6.4.2.49}%
+\contentsline {subsubsection}{\numberline {6.4.2.50}zappicProt\_2K5PopCallback()}{51}{subsubsection.6.4.2.50}%
+\contentsline {subsubsection}{\numberline {6.4.2.51}zappicProt\_428PopCallback()}{51}{subsubsection.6.4.2.51}%
+\contentsline {subsubsection}{\numberline {6.4.2.52}zappicProt\_529PopCallback()}{52}{subsubsection.6.4.2.52}%
+\contentsline {subsubsection}{\numberline {6.4.2.53}zappicProt\_cancelarPopCallback()}{52}{subsubsection.6.4.2.53}%
+\contentsline {subsubsection}{\numberline {6.4.2.54}zappicProt\_iniciarPopCallback()}{52}{subsubsection.6.4.2.54}%
+\contentsline {chapter}{\numberline {7}Class Documentation}{55}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Adafruit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A219 Class Reference}{55}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{55}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Constructor \& Destructor Documentation}{56}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}Adafruit\_INA219()}{56}{subsubsection.7.1.2.1}%
+\contentsline {subsection}{\numberline {7.1.3}Member Function Documentation}{56}{subsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.1}begin()}{56}{subsubsection.7.1.3.1}%
+\contentsline {subsubsection}{\numberline {7.1.3.2}getBusVoltage\_V()}{56}{subsubsection.7.1.3.2}%
+\contentsline {subsubsection}{\numberline {7.1.3.3}getCurrent\_mA()}{57}{subsubsection.7.1.3.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.4}getPower\_mW()}{57}{subsubsection.7.1.3.4}%
+\contentsline {subsubsection}{\numberline {7.1.3.5}getShuntVoltage\_mV()}{57}{subsubsection.7.1.3.5}%
+\contentsline {subsubsection}{\numberline {7.1.3.6}setCalibration\_32V\_1A()}{57}{subsubsection.7.1.3.6}%
+\contentsline {subsubsection}{\numberline {7.1.3.7}setCalibration\_32V\_2A()}{58}{subsubsection.7.1.3.7}%
+\contentsline {chapter}{\numberline {8}File Documentation}{59}{chapter.8}%
+\contentsline {section}{\numberline {8.1}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/mario/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arduino/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}zapper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V9.0/arquivos-\/dox/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Adafruit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A219/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Adafruit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A219.h File Reference}{59}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{60}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/mario/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arduino/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}zapper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V9.0/arquivos-\/dox/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arduino.h File Reference}{61}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{63}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/mario/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arduino/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}zapper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V9.0/arquivos-\/dox/mario\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}nextion.h File Reference}{63}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{67}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Variable Documentation}{67}{subsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}nex\_listen\_list}{67}{subsubsection.8.3.2.1}%
+\contentsline {section}{\numberline {8.4}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/mario/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arduino/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}zapper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V9.0/arquivos-\/dox/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Nextion.h File Reference}{68}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{68}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/mario/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arduino/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}zapper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V9.0/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}zapper\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V9.0.ino File Reference}{69}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{75}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Variable Documentation}{76}{subsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.1}DEBUGANDO}{76}{subsubsection.8.5.2.1}%
+\contentsline {subsubsection}{\numberline {8.5.2.2}tab\_clark}{76}{subsubsection.8.5.2.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.3}tab\_zappic}{76}{subsubsection.8.5.2.3}%

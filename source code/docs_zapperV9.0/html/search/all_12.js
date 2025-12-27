@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['zapp_179',['zapp',['../_e_s_p32__zapper_v9_80_8ino.html#ad6585786288dda076bff2d64d27b8c5d',1,'ESP32_zapperV9.0.ino']]],
+  ['zappicator_180',['zappicator',['../_e_s_p32__zapper_v9_80_8ino.html#af20d710dfc20d6c511718c794ac87e7e',1,'ESP32_zapperV9.0.ino']]],
+  ['zappicprot_5f1kpopcallback_181',['zappicProt_1KPopCallback',['../group___nextion.html#ga2c8f8fca85de1ad84c45b7aa2f20a661',1,'zappicProt_1KPopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino'],['../group___nextion.html#ga2c8f8fca85de1ad84c45b7aa2f20a661',1,'zappicProt_1KPopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino']]],
+  ['zappicprot_5f2k5popcallback_182',['zappicProt_2K5PopCallback',['../group___nextion.html#ga4fff75c13b440d9fd33441059806ed91',1,'zappicProt_2K5PopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino'],['../group___nextion.html#ga4fff75c13b440d9fd33441059806ed91',1,'zappicProt_2K5PopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino']]],
+  ['zappicprot_5f428popcallback_183',['zappicProt_428PopCallback',['../group___nextion.html#gaebb64c00b6c08f69a1424405e05d6f50',1,'zappicProt_428PopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino'],['../group___nextion.html#gaebb64c00b6c08f69a1424405e05d6f50',1,'zappicProt_428PopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino']]],
+  ['zappicprot_5f529popcallback_184',['zappicProt_529PopCallback',['../group___nextion.html#gacf956f951eb86d502cd4ed62d164a40a',1,'zappicProt_529PopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino'],['../group___nextion.html#gacf956f951eb86d502cd4ed62d164a40a',1,'zappicProt_529PopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino']]],
+  ['zappicprot_5fcancelarpopcallback_185',['zappicProt_cancelarPopCallback',['../group___nextion.html#gab0a14b4fc6cd077a1ac7ff1fb8c77e46',1,'zappicProt_cancelarPopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino'],['../group___nextion.html#gab0a14b4fc6cd077a1ac7ff1fb8c77e46',1,'zappicProt_cancelarPopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino']]],
+  ['zappicprot_5finiciarpopcallback_186',['zappicProt_iniciarPopCallback',['../group___nextion.html#gafd6e9db66674a2b9904603e4c0a59b28',1,'zappicProt_iniciarPopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino'],['../group___nextion.html#gafd6e9db66674a2b9904603e4c0a59b28',1,'zappicProt_iniciarPopCallback(void *ptr):&#160;ESP32_zapperV9.0.ino']]]
+];

@@ -1,0 +1,137 @@
+
+Port closed
+Opening port
+Port open
+Hora NTP: 2020-03-09 Seg 12:31:55
+Hora RTC: 2020-03-09  Seg 12:31:55
+Login Usuario:tata
+Senha Usuario:12345
+  Abriu bd01.db
+ID,Login,Senha,Nome:
+0
+000
+000
+erro login
+0
+
+ERRO - NAO BATEU Login
+ID,Login,Senha,Nome:
+1
+mario
+56789
+mario luis
+4
+
+ERRO - NAO BATEU Login
+ID,Login,Senha,Nome:
+2
+tata
+12345
+talita cristina
+6
+
+OK - BATEU LOGIN
+OK - BATEU Senha
+  Fechou bd01.db
+usuarioAtivo: : 2
+=====
+Bom dia, talita cristina
+  Abriu bd01.db
+  Fechou bd01.db
+Gravou registro de LogOperação
+Tela Status Maquina
+  Abriu bd01.db
+numero_linhas: 3
+  Fechou bd01.db
+  Abriu bd01.db
+numero_linhas: 3
+  Fechou bd01.db
+  Abriu bd01.db
+numero_linhas: 4
+  Fechou bd01.db
+  Abriu bd01.db
+numero_linhas: 4
+  Fechou bd01.db
+  Abriu bd01.db
+numero_linhas: 0
+  Fechou bd01.db
+  Abriu bd01.db
+numero_linhas: 38
+  Fechou bd01.db
+PEGOU da EEPROM-ssid
+Menu Manutenção
+Hora NTP: 2020-03-09 Seg 12:32:25
+Hora RTC: 2020-03-09  Seg 12:32:25
+Tipos Tratamento
+Menu Manutenção
+Tabela de Usuários
+Menu Manutenção
+Tela Registro Operação
+  Abriu bd01.db
+numero_linhas: 38
+  Fechou bd01.db
+  Abriu bd01.db
+Offset: : 0
+=====
+pagAtual: : 1
+=====
+pagTotal: : 7
+=====
+SELECT log_usuario.data, usuarios.nome, tab_operacoes.operacao FROM log_usuario JOIN usuarios ON log_usuario.usuario = usu_id JOIN tab_operacoes ON log_usuario.operacao = ope_id ORDER BY log_usuario.data DESC LIMIT 5 OFFSET 0
+Offset: : 0
+=====
+Pega  5 regs
+  Fechou bd01.db
+qquer outra coisa continua paginando
+2
+  Abriu bd01.db
+Offset: : 0
+=====
+pagAtual: : 2
+=====
+pagTotal: : 7
+=====
+SELECT log_usuario.data, usuarios.nome, tab_operacoes.operacao FROM log_usuario JOIN usuarios ON log_usuario.usuario = usu_id JOIN tab_operacoes ON log_usuario.operacao = ope_id ORDER BY log_usuario.data DESC LIMIT 5 OFFSET 5
+Offset: : 5
+=====
+Pega  5 regs
+  Fechou bd01.db
+qquer outra coisa continua paginando
+3
+  Abriu bd01.db
+Offset: : 5
+=====
+pagAtual: : 3
+=====
+pagTotal: : 7
+=====
+SELECT log_usuario.data, usuarios.nome, tab_operacoes.operacao FROM log_usuario JOIN usuarios ON log_usuario.usuario = usu_id JOIN tab_operacoes ON log_usuario.operacao = ope_id ORDER BY log_usuario.data DESC LIMIT 5 OFFSET 10
+Offset: : 10
+=====
+Pega  5 regs
+  Fechou bd01.db
+qquer outra coisa continua paginando
+4
+Hora NTP: 2020-03-09 Seg 12:32:55
+Hora RTC: 2020-03-09  Seg 12:32:55
+Menu Manutenção
+Arquivo de Log
+Menu Manutenção
+Tela dos Pacientes
+Menu Manutenção
+Tabela de Operações
+Hora NTP: 2020-03-09 Seg 12:33:25
+Hora RTC: 2020-03-09  Seg 12:33:25
+Menu Manutenção
+Tabela de Usuários
+Hora NTP: 2020-03-09 Seg 12:33:55
+Hora RTC: 2020-03-09  Seg 12:33:55
+Menu Manutenção
+Tipos Tratamento
+Menu Manutenção
+Hora NTP: 2020-03-09 Seg 12:34:25
+Hora RTC: 2020-03-09  Seg 12:34:25
+Hora NTP: 2020-03-09 Seg 12:34:55
+Hora RTC: 2020-03-09  Seg 12:34:55
+Hora NTP: 2020-03-09 Seg 12:35:25
+

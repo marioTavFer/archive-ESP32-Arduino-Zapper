@@ -1,0 +1,510 @@
+\hypertarget{group___protocolos}{}\doxysection{Rife-\/\+Clark-\/\+Zappicator}
+\label{group___protocolos}\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+
+
+rotinas-\/funcoes relacionadas aos protocolos-\/tratamentos Rife, Clark, Zappicator a)descricao linha da zappicator \{n, x,y,x,y,x,y,.....\} n -\/ quantidade de grupos frequencia+tempo ligada, x-\/frequencia, (em Hz) y-\/tempo ligada a freq. (em segundos) -\/$>$ 15min = 900seg o original e uma frequencia 1K\+Hz e uns +/-\/ 15min (tembem li 30m) aqui pode colocar mais freq igual a clark \char`\"{}pares\char`\"{}=freq+tempo  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___protocolos_gabac02eb0951cfbc536b8081abeb6d48f}{limpa\+Status}} (int protocolo)
+\begin{DoxyCompactList}\small\item\em limpa todos flags do protocolo em execucao \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaa4d239d9f7aedc84555640f1a7367391}{tempo\+Marca\+Inicio}} ()
+\begin{DoxyCompactList}\small\item\em guarda hora que comecou protocolo \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{group___protocolos_gacb8bc020a5bca589a69659404bcd3b9d}{tempo\+Le\+Agora}} ()
+\begin{DoxyCompactList}\small\item\em retorna false se estourou tempo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gab8667d087cf9a07ede0ef29a0d1f24fb}{comeca\+Clark}} ()
+\begin{DoxyCompactList}\small\item\em Inicia protocolo C\+L\+A\+RK. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga2a837acb7ec707c027afddf407ec77b1}{proximo\+Par\+Clark}} ()
+\begin{DoxyCompactList}\small\item\em Proximo par clark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga50fac50aee8e7196e134c67571215353}{clark\+\_\+7min}} ()
+\begin{DoxyCompactList}\small\item\em Controle de tempo (7 min) -\/ C\+L\+A\+RK. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga2def40b11528ced057d8ba84974525b4}{clark\+\_\+20min}} ()
+\begin{DoxyCompactList}\small\item\em Controle de tempo (20 min) -\/ Clark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga26289eabd079d22550139f47c8f566ef}{avanca\+Barra\+Clark}} (int incremento)
+\begin{DoxyCompactList}\small\item\em Avanca barra clark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaed7609b143facc12f8901978d87cabc6}{comeca\+Zappic}} ()
+\begin{DoxyCompactList}\small\item\em comeca Z\+A\+P\+P\+I\+C\+A\+T\+OR \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga3e17fdf682148d28b7e21381b4ea05cb}{controle\+Zappic}} ()
+\begin{DoxyCompactList}\small\item\em Controle do zappicator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga559d78c6e10034028d1a559a9742fa0c}{avanca\+Barra\+Zapp}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em Avanca barra zapp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaacefdb8ad31687c14b79b78caf80e589}{comeca\+Rife\+Pre}} (int \mbox{\hyperlink{group___protocolos_ga76d261dae96f54c726b098788f4db920}{qual\+Rife}})
+\begin{DoxyCompactList}\small\item\em Comeca R\+I\+FE P\+RE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gabd97aaefa4fd44b1da132162c1af6dbf}{proximo\+Rife\+Pre}} ()
+\begin{DoxyCompactList}\small\item\em Proximo rife pre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga7c165e5439fa5bd4af775325b54524d4}{avanca\+Barra\+Rife\+Pre}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em A\+L\+GO E\+S\+T\+R\+A\+N\+HO C\+OM E\+S\+TA A\+V\+A\+N\+CA B\+A\+R\+R\+AS DO R\+I\+FE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaf3cca3f240bff13bd88ece04c27c825e}{controle\+Rife\+Pre}} ()
+\begin{DoxyCompactList}\small\item\em Controle rife pre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga797b8f3af470a691610c1c05cc849452}{comeca\+Rife\+E\+T\+D\+FL}} (int \mbox{\hyperlink{group___protocolos_ga76d261dae96f54c726b098788f4db920}{qual\+Rife}})
+\begin{DoxyCompactList}\small\item\em R\+I\+FE E\+T\+D\+FL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaecc555a769f96e53491a76fecb4a63ee}{proximo\+Rife\+E\+T\+D\+FL}} ()
+\begin{DoxyCompactList}\small\item\em Proximo rife etdfl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga69ca9875f7c09c5710ee640d82525921}{avanca\+Barra\+Rife\+E\+T\+D\+FL}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em Avanca barra rife etdfl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga189617e5aa7e730c0abe0393b4e970ad}{controle\+Rife\+E\+T\+D\+FL}} ()
+\begin{DoxyCompactList}\small\item\em Controle rife etdfl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga7d44653a760ceb5fde10d5ab3d0fa75c}{comeca\+Rife\+Manual}} ()
+\begin{DoxyCompactList}\small\item\em Comeca R\+I\+FE M\+A\+N\+U\+AL vai ler frequencias e tempos; numero lido -\/ getvalue -\/ usa little endian order 0x01, 0x02, 0x03,0x04 (4 bytes na msg de retorno) 0x01+(0x02$\ast$256)+(0x03$\ast$65536)+(0x04$\ast$16777216) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_ga1694f7868c868f578eb419aae8e67ec1}{proximo\+Rife\+Manual}} ()
+\begin{DoxyCompactList}\small\item\em Proximo rife manual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaaedbe7d1dcccb8d69791e6dee7b1748f}{avanca\+Barra\+Rife\+Manual}} (float tempo\+Divisor)
+\begin{DoxyCompactList}\small\item\em Avanca barra rife manual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___protocolos_gaf8f31cf3c84cb588d1e551f5f6fe1141}{controle\+Rife\+Manual}} ()
+\begin{DoxyCompactList}\small\item\em Controle rife manual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___protocolos_gaaecc1eb09af795b1094b8526a3b40b89}\label{group___protocolos_gaaecc1eb09af795b1094b8526a3b40b89}} 
+bool \mbox{\hyperlink{group___protocolos_gaaecc1eb09af795b1094b8526a3b40b89}{em\+Programa}} = false
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ flag de em programa de Rife, Clark, Zappicator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga907b1ed93d1bbdb9814f33bee524680a}\label{group___protocolos_ga907b1ed93d1bbdb9814f33bee524680a}} 
+int \mbox{\hyperlink{group___protocolos_ga907b1ed93d1bbdb9814f33bee524680a}{qual\+Programa}} = 0
+\begin{DoxyCompactList}\small\item\em identifica programa, 1-\/clark, 2-\/zappic, 3-\/rife, etc) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga98be2ea7f9227e0352400defee018967}\label{group___protocolos_ga98be2ea7f9227e0352400defee018967}} 
+int \mbox{\hyperlink{group___protocolos_ga98be2ea7f9227e0352400defee018967}{estagio}} = 0
+\begin{DoxyCompactList}\small\item\em indica em que estagio esta -\/ qual par de frequencias \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga0eda7d75716f4671cab2b9b951fd6a3d}\label{group___protocolos_ga0eda7d75716f4671cab2b9b951fd6a3d}} 
+int \mbox{\hyperlink{group___protocolos_ga0eda7d75716f4671cab2b9b951fd6a3d}{quantos\+Estagios}} = 0
+\begin{DoxyCompactList}\small\item\em indica quantos estagios-\/fases tem o protocolo \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_gae2a68c0975174c5d78a34515e19d63dc}\label{group___protocolos_gae2a68c0975174c5d78a34515e19d63dc}} 
+float \mbox{\hyperlink{group___protocolos_gae2a68c0975174c5d78a34515e19d63dc}{pwm\+Frequencia}} = 0
+\begin{DoxyCompactList}\small\item\em indica a (pwm) frequencia \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_gadd5221743d7cc481ab31b0520d427c23}\label{group___protocolos_gadd5221743d7cc481ab31b0520d427c23}} 
+float \mbox{\hyperlink{group___protocolos_gadd5221743d7cc481ab31b0520d427c23}{pwm\+Duracao}} = 0
+\begin{DoxyCompactList}\small\item\em indica (pwm) a duracao do protocolo-\/fase-\/estagio \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga654659e96d18ffcf3ec910b9c5e4adf8}\label{group___protocolos_ga654659e96d18ffcf3ec910b9c5e4adf8}} 
+bool \mbox{\hyperlink{group___protocolos_ga654659e96d18ffcf3ec910b9c5e4adf8}{primeira\+Vez}} = true
+\begin{DoxyCompactList}\small\item\em indica se comecou(1 vez) C\+L\+A\+RK \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_gab90cb7393f65040510a15d32da8e7ca9}\label{group___protocolos_gab90cb7393f65040510a15d32da8e7ca9}} 
+unsigned long \mbox{\hyperlink{group___protocolos_gab90cb7393f65040510a15d32da8e7ca9}{protocolo\+Antes\+Rasc}}
+\begin{DoxyCompactList}\small\item\em do protocolo C\+L\+A\+RK antes rascunho \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga9662531b74ced5a3b51760526dda72c5}\label{group___protocolos_ga9662531b74ced5a3b51760526dda72c5}} 
+unsigned long \mbox{\hyperlink{group___protocolos_ga9662531b74ced5a3b51760526dda72c5}{protocolo\+Segundos\+Total}} = 0
+\begin{DoxyCompactList}\small\item\em do protocolo C\+L\+A\+RK contador segundos total \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga456b6fd80101b7ea16950c866f09a07e}\label{group___protocolos_ga456b6fd80101b7ea16950c866f09a07e}} 
+unsigned long \mbox{\hyperlink{group___protocolos_ga456b6fd80101b7ea16950c866f09a07e}{protocolo\+Segundos}} = 0
+\begin{DoxyCompactList}\small\item\em do protocolo C\+L\+A\+RK contador segundos \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga76d261dae96f54c726b098788f4db920}\label{group___protocolos_ga76d261dae96f54c726b098788f4db920}} 
+int \mbox{\hyperlink{group___protocolos_ga76d261dae96f54c726b098788f4db920}{qual\+Rife}} = 1
+\begin{DoxyCompactList}\small\item\em indica qual protocolo Rife \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga12d95ed90b34c10e7b6c1408c2c91382}\label{group___protocolos_ga12d95ed90b34c10e7b6c1408c2c91382}} 
+uint32\+\_\+t \mbox{\hyperlink{group___protocolos_ga12d95ed90b34c10e7b6c1408c2c91382}{frequencia\+Rasc}} \mbox{[}7\mbox{]}
+\begin{DoxyCompactList}\small\item\em Operacao Manual (Rife) tabela de rascunho das frequencias. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___protocolos_ga3d4c0ddd9b5c458fcc86cbffff43f6fd}\label{group___protocolos_ga3d4c0ddd9b5c458fcc86cbffff43f6fd}} 
+uint32\+\_\+t \mbox{\hyperlink{group___protocolos_ga3d4c0ddd9b5c458fcc86cbffff43f6fd}{duracao\+Rasc}} \mbox{[}7\mbox{]}
+\begin{DoxyCompactList}\small\item\em Operacao Manual (Rife) tabela de duracao das frequencias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+rotinas-\/funcoes relacionadas aos protocolos-\/tratamentos Rife, Clark, Zappicator a)descricao linha da zappicator \{n, x,y,x,y,x,y,.....\} n -\/ quantidade de grupos frequencia+tempo ligada, x-\/frequencia, (em Hz) y-\/tempo ligada a freq. (em segundos) -\/$>$ 15min = 900seg o original e uma frequencia 1K\+Hz e uns +/-\/ 15min (tembem li 30m) aqui pode colocar mais freq igual a clark \char`\"{}pares\char`\"{}=freq+tempo 
+
+b)descricao linha da C\+L\+A\+RK \{n,x,y,x,y,x,y,.....\} n -\/ quantidade de grupos frequencia+tempo ligada, x-\/frequencia, (em Hz) y-\/tempo ligada a freq. (em segundos) Clark \char`\"{}oficial\char`\"{} (5 fases/etapas)\+: 30K\+Hz-\/$>$7min;descanco-\/$>$20min;30K\+Hz-\/$>$7min;descanco-\/$>$20min;30K\+Hz-\/$>$7min;F\+IM
+
+c)C\+A\+F\+L-\/\+E\+T\+D\+F\+L-\/2018 R\+I\+FE\+: \{x,y,t, zzz,zzz,zzz,.....\} x -\/ numero do programa, y -\/ quantidade de frequencias, t -\/ tempo para cada frequencia em segundos-\/por enquanto,(minx60) zzz-\/ as frequencias em $\ast$$\ast$$\ast$ K\+Hz $\ast$$\ast$$\ast$ T\+R\+A\+N\+S\+F\+E\+RI T\+A\+B\+E\+L\+AS R\+I\+FE P\+A\+RA =$>$ \mbox{\hyperlink{tabelas__rife-esp32_8h_source}{tabelas\+\_\+rife-\/\+E\+S\+P32.\+h}} (esta nos \char`\"{}include\char`\"{}) olhar comentarios la e tambem \char`\"{}a fazer\char`\"{}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___protocolos_ga26289eabd079d22550139f47c8f566ef}\label{group___protocolos_ga26289eabd079d22550139f47c8f566ef}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!avancaBarraClark@{avancaBarraClark}}
+\index{avancaBarraClark@{avancaBarraClark}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{avancaBarraClark()}{avancaBarraClark()}}
+{\footnotesize\ttfamily void avanca\+Barra\+Clark (\begin{DoxyParamCaption}\item[{int}]{incremento }\end{DoxyParamCaption})}
+
+
+
+Avanca barra clark. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em incremento} & int; incremento. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___protocolos_ga69ca9875f7c09c5710ee640d82525921}\label{group___protocolos_ga69ca9875f7c09c5710ee640d82525921}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!avancaBarraRifeETDFL@{avancaBarraRifeETDFL}}
+\index{avancaBarraRifeETDFL@{avancaBarraRifeETDFL}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{avancaBarraRifeETDFL()}{avancaBarraRifeETDFL()}}
+{\footnotesize\ttfamily void avanca\+Barra\+Rife\+E\+T\+D\+FL (\begin{DoxyParamCaption}\item[{float}]{tempo\+Divisor }\end{DoxyParamCaption})}
+
+
+
+Avanca barra rife etdfl. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tempo\+Divisor} & float; tempo divisor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___protocolos_gaaedbe7d1dcccb8d69791e6dee7b1748f}\label{group___protocolos_gaaedbe7d1dcccb8d69791e6dee7b1748f}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!avancaBarraRifeManual@{avancaBarraRifeManual}}
+\index{avancaBarraRifeManual@{avancaBarraRifeManual}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{avancaBarraRifeManual()}{avancaBarraRifeManual()}}
+{\footnotesize\ttfamily void avanca\+Barra\+Rife\+Manual (\begin{DoxyParamCaption}\item[{float}]{tempo\+Divisor }\end{DoxyParamCaption})}
+
+
+
+Avanca barra rife manual. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tempo\+Divisor} & float; The tempo divisor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___protocolos_ga7c165e5439fa5bd4af775325b54524d4}\label{group___protocolos_ga7c165e5439fa5bd4af775325b54524d4}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!avancaBarraRifePre@{avancaBarraRifePre}}
+\index{avancaBarraRifePre@{avancaBarraRifePre}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{avancaBarraRifePre()}{avancaBarraRifePre()}}
+{\footnotesize\ttfamily void avanca\+Barra\+Rife\+Pre (\begin{DoxyParamCaption}\item[{float}]{tempo\+Divisor }\end{DoxyParamCaption})}
+
+
+
+A\+L\+GO E\+S\+T\+R\+A\+N\+HO C\+OM E\+S\+TA A\+V\+A\+N\+CA B\+A\+R\+R\+AS DO R\+I\+FE. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tempo\+Divisor} & float ;divisor de tempo para inc da barra. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___protocolos_ga559d78c6e10034028d1a559a9742fa0c}\label{group___protocolos_ga559d78c6e10034028d1a559a9742fa0c}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!avancaBarraZapp@{avancaBarraZapp}}
+\index{avancaBarraZapp@{avancaBarraZapp}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{avancaBarraZapp()}{avancaBarraZapp()}}
+{\footnotesize\ttfamily void avanca\+Barra\+Zapp (\begin{DoxyParamCaption}\item[{float}]{tempo\+Divisor }\end{DoxyParamCaption})}
+
+
+
+Avanca barra zapp. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tempo\+Divisor} & float; The tempo divisor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___protocolos_ga2def40b11528ced057d8ba84974525b4}\label{group___protocolos_ga2def40b11528ced057d8ba84974525b4}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!clark\_20min@{clark\_20min}}
+\index{clark\_20min@{clark\_20min}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{clark\_20min()}{clark\_20min()}}
+{\footnotesize\ttfamily void clark\+\_\+20min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controle de tempo (20 min) -\/ Clark. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ se terminou uma etapa avanca barra no display\mbox{\Hypertarget{group___protocolos_ga50fac50aee8e7196e134c67571215353}\label{group___protocolos_ga50fac50aee8e7196e134c67571215353}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!clark\_7min@{clark\_7min}}
+\index{clark\_7min@{clark\_7min}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{clark\_7min()}{clark\_7min()}}
+{\footnotesize\ttfamily void clark\+\_\+7min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controle de tempo (7 min) -\/ C\+L\+A\+RK. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ + 2
+
+$<$ (6 x 3) para resultar \char`\"{}20\char`\"{}\mbox{\Hypertarget{group___protocolos_gab8667d087cf9a07ede0ef29a0d1f24fb}\label{group___protocolos_gab8667d087cf9a07ede0ef29a0d1f24fb}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!comecaClark@{comecaClark}}
+\index{comecaClark@{comecaClark}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{comecaClark()}{comecaClark()}}
+{\footnotesize\ttfamily void comeca\+Clark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia protocolo C\+L\+A\+RK. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ indica que programa Clark comeca
+
+$<$ indica que 1 estagio comeca
+
+$<$ tempo em segundos\mbox{\Hypertarget{group___protocolos_ga797b8f3af470a691610c1c05cc849452}\label{group___protocolos_ga797b8f3af470a691610c1c05cc849452}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!comecaRifeETDFL@{comecaRifeETDFL}}
+\index{comecaRifeETDFL@{comecaRifeETDFL}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{comecaRifeETDFL()}{comecaRifeETDFL()}}
+{\footnotesize\ttfamily void comeca\+Rife\+E\+T\+D\+FL (\begin{DoxyParamCaption}\item[{int}]{qual\+Rife }\end{DoxyParamCaption})}
+
+
+
+R\+I\+FE E\+T\+D\+FL. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em qual\+Rife} & int ;qual o programa Rife. \\
+\hline
+\end{DoxyParams}
+$<$ indica que programa R\+I\+FE comeca
+
+$<$ indica que 1 estagio comeca
+
+$<$E\+R\+RO
+
+$<$inicia display do nextion
+
+$<$ I\+N\+C\+O\+N\+S\+I\+S\+T\+E\+N\+TE L\+O\+G\+I\+CA.\mbox{\Hypertarget{group___protocolos_ga7d44653a760ceb5fde10d5ab3d0fa75c}\label{group___protocolos_ga7d44653a760ceb5fde10d5ab3d0fa75c}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!comecaRifeManual@{comecaRifeManual}}
+\index{comecaRifeManual@{comecaRifeManual}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{comecaRifeManual()}{comecaRifeManual()}}
+{\footnotesize\ttfamily void comeca\+Rife\+Manual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comeca R\+I\+FE M\+A\+N\+U\+AL vai ler frequencias e tempos; numero lido -\/ getvalue -\/ usa little endian order 0x01, 0x02, 0x03,0x04 (4 bytes na msg de retorno) 0x01+(0x02$\ast$256)+(0x03$\ast$65536)+(0x04$\ast$16777216) 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ indica que o programa R\+I\+FE comeca
+
+$<$ indica que 1 estagio comeca
+
+vai ler frequencias e tempos; numero lido -\/ getvalue -\/ usa little endian order 0x01,0x02,0x03,0x04 (4 bytes na msg de retorno) 0x01+(0x02$\ast$256)+(0x03$\ast$65536)+(0x04$\ast$16777216) ~\newline
+
+
+$<$ se nao houver freq1 ou dura1 cai fora
+
+$<$ inicia display do nextion\mbox{\Hypertarget{group___protocolos_gaacefdb8ad31687c14b79b78caf80e589}\label{group___protocolos_gaacefdb8ad31687c14b79b78caf80e589}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!comecaRifePre@{comecaRifePre}}
+\index{comecaRifePre@{comecaRifePre}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{comecaRifePre()}{comecaRifePre()}}
+{\footnotesize\ttfamily void comeca\+Rife\+Pre (\begin{DoxyParamCaption}\item[{int}]{qual\+Rife }\end{DoxyParamCaption})}
+
+
+
+Comeca R\+I\+FE P\+RE. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em qual\+Rife} & int; qual programa rife. \\
+\hline
+\end{DoxyParams}
+$<$ indica que programa R\+I\+FE comeca
+
+$<$ indica que 1 estagio comeca
+
+$<$ E\+R\+RO
+
+$<$ inicia display do nextion\mbox{\Hypertarget{group___protocolos_gaed7609b143facc12f8901978d87cabc6}\label{group___protocolos_gaed7609b143facc12f8901978d87cabc6}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!comecaZappic@{comecaZappic}}
+\index{comecaZappic@{comecaZappic}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{comecaZappic()}{comecaZappic()}}
+{\footnotesize\ttfamily void comeca\+Zappic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+comeca Z\+A\+P\+P\+I\+C\+A\+T\+OR 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ indica que programa Zapiccator comeca
+
+$<$ indica que 1 estagio comeca
+
+$<$ C\+U\+I\+D\+A\+D\+O-\/\+P\+R\+O\+V\+I\+S\+O\+R\+I\+O-\/\+TT
+
+$<$ ve se liga 1 K\+Hz
+
+$<$ ve se liga 2.\+5 K\+Hz
+
+$<$ ve se liga 428 Hz
+
+$<$ ve se liga 529 Hz
+
+$<$ ve qual tempo de duracao
+
+$<$ converte min para seg
+
+$<$ zera barra no display
+
+$<$ liga pwm
+
+$<$ desliga pwm\mbox{\Hypertarget{group___protocolos_ga189617e5aa7e730c0abe0393b4e970ad}\label{group___protocolos_ga189617e5aa7e730c0abe0393b4e970ad}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!controleRifeETDFL@{controleRifeETDFL}}
+\index{controleRifeETDFL@{controleRifeETDFL}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{controleRifeETDFL()}{controleRifeETDFL()}}
+{\footnotesize\ttfamily void controle\+Rife\+E\+T\+D\+FL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controle rife etdfl. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$controla (escala) avanco de barras\mbox{\Hypertarget{group___protocolos_gaf8f31cf3c84cb588d1e551f5f6fe1141}\label{group___protocolos_gaf8f31cf3c84cb588d1e551f5f6fe1141}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!controleRifeManual@{controleRifeManual}}
+\index{controleRifeManual@{controleRifeManual}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{controleRifeManual()}{controleRifeManual()}}
+{\footnotesize\ttfamily void controle\+Rife\+Manual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controle rife manual. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ controla (escala) avanco de barras\mbox{\Hypertarget{group___protocolos_gaf3cca3f240bff13bd88ece04c27c825e}\label{group___protocolos_gaf3cca3f240bff13bd88ece04c27c825e}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!controleRifePre@{controleRifePre}}
+\index{controleRifePre@{controleRifePre}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{controleRifePre()}{controleRifePre()}}
+{\footnotesize\ttfamily void controle\+Rife\+Pre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controle rife pre. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___protocolos_ga3e17fdf682148d28b7e21381b4ea05cb}\label{group___protocolos_ga3e17fdf682148d28b7e21381b4ea05cb}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!controleZappic@{controleZappic}}
+\index{controleZappic@{controleZappic}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{controleZappic()}{controleZappic()}}
+{\footnotesize\ttfamily void controle\+Zappic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Controle do zappicator. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ controla (escala) avanco de barras\mbox{\Hypertarget{group___protocolos_gabac02eb0951cfbc536b8081abeb6d48f}\label{group___protocolos_gabac02eb0951cfbc536b8081abeb6d48f}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!limpaStatus@{limpaStatus}}
+\index{limpaStatus@{limpaStatus}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{limpaStatus()}{limpaStatus()}}
+{\footnotesize\ttfamily void limpa\+Status (\begin{DoxyParamCaption}\item[{int}]{protocolo }\end{DoxyParamCaption})}
+
+
+
+limpa todos flags do protocolo em execucao 
+
+Limpa status\+: zera variaveis dos programas/protocoloes e frequencias. Identifica o protocolo por causa do rife manual para limpar tabela rascunho.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em protocolo} & int; protocolo (identifica qual protocolo que tem que parar). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___protocolos_ga2a837acb7ec707c027afddf407ec77b1}\label{group___protocolos_ga2a837acb7ec707c027afddf407ec77b1}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!proximoParClark@{proximoParClark}}
+\index{proximoParClark@{proximoParClark}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{proximoParClark()}{proximoParClark()}}
+{\footnotesize\ttfamily void proximo\+Par\+Clark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Proximo par clark. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ para controlar rotinas de clark7min e clark20m\mbox{\Hypertarget{group___protocolos_gaecc555a769f96e53491a76fecb4a63ee}\label{group___protocolos_gaecc555a769f96e53491a76fecb4a63ee}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!proximoRifeETDFL@{proximoRifeETDFL}}
+\index{proximoRifeETDFL@{proximoRifeETDFL}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{proximoRifeETDFL()}{proximoRifeETDFL()}}
+{\footnotesize\ttfamily void proximo\+Rife\+E\+T\+D\+FL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Proximo rife etdfl. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$inicia display do nextion\mbox{\Hypertarget{group___protocolos_ga1694f7868c868f578eb419aae8e67ec1}\label{group___protocolos_ga1694f7868c868f578eb419aae8e67ec1}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!proximoRifeManual@{proximoRifeManual}}
+\index{proximoRifeManual@{proximoRifeManual}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{proximoRifeManual()}{proximoRifeManual()}}
+{\footnotesize\ttfamily void proximo\+Rife\+Manual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Proximo rife manual. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\mbox{\Hypertarget{group___protocolos_gabd97aaefa4fd44b1da132162c1af6dbf}\label{group___protocolos_gabd97aaefa4fd44b1da132162c1af6dbf}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!proximoRifePre@{proximoRifePre}}
+\index{proximoRifePre@{proximoRifePre}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{proximoRifePre()}{proximoRifePre()}}
+{\footnotesize\ttfamily void proximo\+Rife\+Pre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Proximo rife pre. 
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ inicia display do nextion\mbox{\Hypertarget{group___protocolos_gacb8bc020a5bca589a69659404bcd3b9d}\label{group___protocolos_gacb8bc020a5bca589a69659404bcd3b9d}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!tempoLeAgora@{tempoLeAgora}}
+\index{tempoLeAgora@{tempoLeAgora}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{tempoLeAgora()}{tempoLeAgora()}}
+{\footnotesize\ttfamily unsigned long tempo\+Le\+Agora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retorna false se estourou tempo 
+
+Le tempo que passou desde inicio do programa retorna false se estourou tempo. Verifica o tempo que timer-\/pwm esta ligado/desligado, em funcao do programado em \char`\"{}tempo\+Referencia\char`\"{} -\/ em segundos. O tempo\+Inicial foi quando comecou (na rotina tempo\+Marca\+Inicio). O rasc o tempo(relogio) e agora. O tempo\+Referencia e quanto tem que demorar.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+unsigned long diferenca (retorna quanto tempo passou, em segundos) 
+\end{DoxyReturn}
+$<$ para ter em segundos divide por 1000
+
+$<$ volta tempo decorrido em segundos\mbox{\Hypertarget{group___protocolos_gaa4d239d9f7aedc84555640f1a7367391}\label{group___protocolos_gaa4d239d9f7aedc84555640f1a7367391}} 
+\index{Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}!tempoMarcaInicio@{tempoMarcaInicio}}
+\index{tempoMarcaInicio@{tempoMarcaInicio}!Rife-\/Clark-\/Zappicator@{Rife-\/Clark-\/Zappicator}}
+\doxysubsubsection{\texorpdfstring{tempoMarcaInicio()}{tempoMarcaInicio()}}
+{\footnotesize\ttfamily void tempo\+Marca\+Inicio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+guarda hora que comecou protocolo 
+
+marca tempo inicial do comeco do protocolo e flags de primeira vez, antes, para leitura do ina219, etc.
+
+\begin{DoxyDate}{Date}
+10/12/2019 
+\end{DoxyDate}
+$<$ marca qdo comecou em milissegundos

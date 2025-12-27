@@ -1,0 +1,159 @@
+\hypertarget{class_adafruit___i_n_a219}{}\doxysection{Adafruit\+\_\+\+I\+N\+A219 Class Reference}
+\label{class_adafruit___i_n_a219}\index{Adafruit\_INA219@{Adafruit\_INA219}}
+
+
+Class that stores state and functions for interacting with I\+N\+A219 current/power monitor IC.  
+
+
+
+
+{\ttfamily \#include $<$Adafruit\+\_\+\+I\+N\+A219.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_adafruit___i_n_a219_a407a9ddf5fec541865d1f91a7e6479d0}{Adafruit\+\_\+\+I\+N\+A219}} (uint8\+\_\+t addr=\mbox{\hyperlink{_adafruit___i_n_a219_8h_a01099281ea98bb6c1aab825f05d9818c}{I\+N\+A219\+\_\+\+A\+D\+D\+R\+E\+SS}})
+\begin{DoxyCompactList}\small\item\em Instantiates a new I\+N\+A219 class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_adafruit___i_n_a219_ac46f358c0af6682ac7ec79593a66b57e}\label{class_adafruit___i_n_a219_ac46f358c0af6682ac7ec79593a66b57e}} 
+void \mbox{\hyperlink{class_adafruit___i_n_a219_ac46f358c0af6682ac7ec79593a66b57e}{begin}} (void)
+\begin{DoxyCompactList}\small\item\em Setups the HW using the default Wire object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_adafruit___i_n_a219_a4b3a04cb9f53dc198e5af501cbd212a2}{begin}} (Two\+Wire $\ast$the\+Wire)
+\begin{DoxyCompactList}\small\item\em Setups the HW (defaults to 32V and 2A for calibration values) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_adafruit___i_n_a219_ac4cebcfad06a740904c894c964335de3}{set\+Calibration\+\_\+32\+V\+\_\+2A}} (void)
+\begin{DoxyCompactList}\small\item\em Configures to I\+N\+A219 to be able to measure up to 32V and 2A of current. Each unit of current corresponds to 100uA, and each unit of power corresponds to 2mW. Counter overflow occurs at 3.\+2A. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_adafruit___i_n_a219_a79542a9167af094f9af7218f063e6297}{set\+Calibration\+\_\+32\+V\+\_\+1A}} (void)
+\begin{DoxyCompactList}\small\item\em Configures to I\+N\+A219 to be able to measure up to 32V and 1A of current. Each unit of current corresponds to 40uA, and each unit of power corresponds to 800{\ucr}W. Counter overflow occurs at 1.\+3A. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_adafruit___i_n_a219_acd5cd9cfadae71308c0d0238d3dfce82}\label{class_adafruit___i_n_a219_acd5cd9cfadae71308c0d0238d3dfce82}} 
+void \mbox{\hyperlink{class_adafruit___i_n_a219_acd5cd9cfadae71308c0d0238d3dfce82}{set\+Calibration\+\_\+16\+V\+\_\+400mA}} (void)
+\begin{DoxyCompactList}\small\item\em set device to alibration which uses the highest precision for current measurement (0.\+1mA), at the expense of only supporting 16V at 400mA max. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_adafruit___i_n_a219_a22b4b21b104d6a939b6deb153bfbb8ae}{get\+Bus\+Voltage\+\_\+V}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the shunt voltage in volts. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_adafruit___i_n_a219_ae4dcd156e9b64583e6fe0d4f48544e87}{get\+Shunt\+Voltage\+\_\+mV}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the shunt voltage in mV (so +-\/327mV) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_adafruit___i_n_a219_af28fcc20fb5387ed034e28670d95755c}{get\+Current\+\_\+mA}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current value in mA, taking into account the config settings and current L\+SB. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_adafruit___i_n_a219_a467eb1f41a30b73ceff7145a90102f8b}{get\+Power\+\_\+mW}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the power value in mW, taking into account the config settings and current L\+SB. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that stores state and functions for interacting with I\+N\+A219 current/power monitor IC. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_a407a9ddf5fec541865d1f91a7e6479d0}\label{class_adafruit___i_n_a219_a407a9ddf5fec541865d1f91a7e6479d0}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!Adafruit\_INA219@{Adafruit\_INA219}}
+\index{Adafruit\_INA219@{Adafruit\_INA219}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{Adafruit\_INA219()}{Adafruit\_INA219()}}
+{\footnotesize\ttfamily Adafruit\+\_\+\+I\+N\+A219\+::\+Adafruit\+\_\+\+I\+N\+A219 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr = {\ttfamily \mbox{\hyperlink{_adafruit___i_n_a219_8h_a01099281ea98bb6c1aab825f05d9818c}{I\+N\+A219\+\_\+\+A\+D\+D\+R\+E\+SS}}} }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new I\+N\+A219 class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & the I2C address the device can be found on. Default is 0x40 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_a4b3a04cb9f53dc198e5af501cbd212a2}\label{class_adafruit___i_n_a219_a4b3a04cb9f53dc198e5af501cbd212a2}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!begin@{begin}}
+\index{begin@{begin}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+I\+N\+A219\+::begin (\begin{DoxyParamCaption}\item[{Two\+Wire $\ast$}]{the\+Wire }\end{DoxyParamCaption})}
+
+
+
+Setups the HW (defaults to 32V and 2A for calibration values) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Wire} & the Two\+Wire object to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_a22b4b21b104d6a939b6deb153bfbb8ae}\label{class_adafruit___i_n_a219_a22b4b21b104d6a939b6deb153bfbb8ae}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!getBusVoltage\_V@{getBusVoltage\_V}}
+\index{getBusVoltage\_V@{getBusVoltage\_V}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{getBusVoltage\_V()}{getBusVoltage\_V()}}
+{\footnotesize\ttfamily float Adafruit\+\_\+\+I\+N\+A219\+::get\+Bus\+Voltage\+\_\+V (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the shunt voltage in volts. 
+
+\begin{DoxyReturn}{Returns}
+the bus voltage converted to volts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_af28fcc20fb5387ed034e28670d95755c}\label{class_adafruit___i_n_a219_af28fcc20fb5387ed034e28670d95755c}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!getCurrent\_mA@{getCurrent\_mA}}
+\index{getCurrent\_mA@{getCurrent\_mA}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{getCurrent\_mA()}{getCurrent\_mA()}}
+{\footnotesize\ttfamily float Adafruit\+\_\+\+I\+N\+A219\+::get\+Current\+\_\+mA (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current value in mA, taking into account the config settings and current L\+SB. 
+
+\begin{DoxyReturn}{Returns}
+the current reading convereted to milliamps 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_a467eb1f41a30b73ceff7145a90102f8b}\label{class_adafruit___i_n_a219_a467eb1f41a30b73ceff7145a90102f8b}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!getPower\_mW@{getPower\_mW}}
+\index{getPower\_mW@{getPower\_mW}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{getPower\_mW()}{getPower\_mW()}}
+{\footnotesize\ttfamily float Adafruit\+\_\+\+I\+N\+A219\+::get\+Power\+\_\+mW (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the power value in mW, taking into account the config settings and current L\+SB. 
+
+\begin{DoxyReturn}{Returns}
+power reading converted to milliwatts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_ae4dcd156e9b64583e6fe0d4f48544e87}\label{class_adafruit___i_n_a219_ae4dcd156e9b64583e6fe0d4f48544e87}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!getShuntVoltage\_mV@{getShuntVoltage\_mV}}
+\index{getShuntVoltage\_mV@{getShuntVoltage\_mV}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{getShuntVoltage\_mV()}{getShuntVoltage\_mV()}}
+{\footnotesize\ttfamily float Adafruit\+\_\+\+I\+N\+A219\+::get\+Shunt\+Voltage\+\_\+mV (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the shunt voltage in mV (so +-\/327mV) 
+
+\begin{DoxyReturn}{Returns}
+the shunt voltage converted to millivolts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_a79542a9167af094f9af7218f063e6297}\label{class_adafruit___i_n_a219_a79542a9167af094f9af7218f063e6297}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!setCalibration\_32V\_1A@{setCalibration\_32V\_1A}}
+\index{setCalibration\_32V\_1A@{setCalibration\_32V\_1A}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{setCalibration\_32V\_1A()}{setCalibration\_32V\_1A()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+I\+N\+A219\+::set\+Calibration\+\_\+32\+V\+\_\+1A (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures to I\+N\+A219 to be able to measure up to 32V and 1A of current. Each unit of current corresponds to 40uA, and each unit of power corresponds to 800{\ucr}W. Counter overflow occurs at 1.\+3A. 
+
+\begin{DoxyNote}{Note}
+These calculations assume a 0.\+1 ohm resistor is present 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_adafruit___i_n_a219_ac4cebcfad06a740904c894c964335de3}\label{class_adafruit___i_n_a219_ac4cebcfad06a740904c894c964335de3}} 
+\index{Adafruit\_INA219@{Adafruit\_INA219}!setCalibration\_32V\_2A@{setCalibration\_32V\_2A}}
+\index{setCalibration\_32V\_2A@{setCalibration\_32V\_2A}!Adafruit\_INA219@{Adafruit\_INA219}}
+\doxysubsubsection{\texorpdfstring{setCalibration\_32V\_2A()}{setCalibration\_32V\_2A()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+I\+N\+A219\+::set\+Calibration\+\_\+32\+V\+\_\+2A (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures to I\+N\+A219 to be able to measure up to 32V and 2A of current. Each unit of current corresponds to 100uA, and each unit of power corresponds to 2mW. Counter overflow occurs at 3.\+2A. 
+
+\begin{DoxyNote}{Note}
+These calculations assume a 0.\+1 ohm resistor is present 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mario/\+Documents/\+Arduino/\+E\+S\+P32\+\_\+zapper\+V9.\+0/arquivos-\/dox/\+Adafruit\+\_\+\+I\+N\+A219/\mbox{\hyperlink{_adafruit___i_n_a219_8h}{Adafruit\+\_\+\+I\+N\+A219.\+h}}\item 
+C\+:/\+Users/mario/\+Documents/\+Arduino/\+E\+S\+P32\+\_\+zapper\+V9.\+0/arquivos-\/dox/\+Adafruit\+\_\+\+I\+N\+A219/Adafruit\+\_\+\+I\+N\+A219.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,241 @@
+\hypertarget{_arduino_8h}{}\doxysection{C\+:/\+Users/mario/\+Documents/\+Arduino/\+E\+S\+P32\+\_\+zapper\+V9.0/arquivos-\/dox/\+Arduino.h File Reference}
+\label{_arduino_8h}\index{C:/Users/mario/Documents/Arduino/ESP32\_zapperV9.0/arquivos-\/dox/Arduino.h@{C:/Users/mario/Documents/Arduino/ESP32\_zapperV9.0/arquivos-\/dox/Arduino.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}freertos/\+Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freertos/task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freertos/semphr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp32-\/hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp8266-\/compat.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}soc/gpio\+\_\+reg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib\+\_\+noniso.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}binary.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pins\+\_\+arduino.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_arduino_8h_a598a3330b3c21701223ee0ca14316eca}\label{_arduino_8h_a598a3330b3c21701223ee0ca14316eca}} 
+\#define {\bfseries PI}~3.\+1415926535897932384626433832795
+\item 
+\mbox{\Hypertarget{_arduino_8h_ae3ec3219e4eee3b0992bfd59c2e2bc42}\label{_arduino_8h_ae3ec3219e4eee3b0992bfd59c2e2bc42}} 
+\#define {\bfseries H\+A\+L\+F\+\_\+\+PI}~1.\+5707963267948966192313216916398
+\item 
+\mbox{\Hypertarget{_arduino_8h_a3b947f4b635461030ff2d87833e5049e}\label{_arduino_8h_a3b947f4b635461030ff2d87833e5049e}} 
+\#define {\bfseries T\+W\+O\+\_\+\+PI}~6.\+283185307179586476925286766559
+\item 
+\mbox{\Hypertarget{_arduino_8h_a212460e743fecb084d717bb2180c5a56}\label{_arduino_8h_a212460e743fecb084d717bb2180c5a56}} 
+\#define {\bfseries D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD}~0.\+017453292519943295769236907684886
+\item 
+\mbox{\Hypertarget{_arduino_8h_a89e47af0449640d4f15191aba5ca24c6}\label{_arduino_8h_a89e47af0449640d4f15191aba5ca24c6}} 
+\#define {\bfseries R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG}~57.\+295779513082320876798154814105
+\item 
+\mbox{\Hypertarget{_arduino_8h_a7f4ee7567f891560bb62dfbda5f93088}\label{_arduino_8h_a7f4ee7567f891560bb62dfbda5f93088}} 
+\#define {\bfseries E\+U\+L\+ER}~2.\+718281828459045235360287471352
+\item 
+\mbox{\Hypertarget{_arduino_8h_aae3f0b4211ba45d265973d40ccbb5fd1}\label{_arduino_8h_aae3f0b4211ba45d265973d40ccbb5fd1}} 
+\#define {\bfseries S\+E\+R\+I\+AL}~0x0
+\item 
+\mbox{\Hypertarget{_arduino_8h_ab4bf926a45354a2f328f1a7b94ebd3c5}\label{_arduino_8h_ab4bf926a45354a2f328f1a7b94ebd3c5}} 
+\#define {\bfseries D\+I\+S\+P\+L\+AY}~0x1
+\item 
+\mbox{\Hypertarget{_arduino_8h_a5811613d98580676f67f0dde8125433e}\label{_arduino_8h_a5811613d98580676f67f0dde8125433e}} 
+\#define {\bfseries L\+S\+B\+F\+I\+R\+ST}~0
+\item 
+\mbox{\Hypertarget{_arduino_8h_a1c7ef42eff02618bde70868af4944d81}\label{_arduino_8h_a1c7ef42eff02618bde70868af4944d81}} 
+\#define {\bfseries M\+S\+B\+F\+I\+R\+ST}~1
+\item 
+\mbox{\Hypertarget{_arduino_8h_aeea2b49478f3b13faedba764985c6e96}\label{_arduino_8h_aeea2b49478f3b13faedba764985c6e96}} 
+\#define {\bfseries R\+I\+S\+I\+NG}~0x01
+\item 
+\mbox{\Hypertarget{_arduino_8h_ac00eb6fc2047dc399280f31b0c5f4472}\label{_arduino_8h_ac00eb6fc2047dc399280f31b0c5f4472}} 
+\#define {\bfseries F\+A\+L\+L\+I\+NG}~0x02
+\item 
+\mbox{\Hypertarget{_arduino_8h_aa39fdb6674592214dc56eacc0808eec4}\label{_arduino_8h_aa39fdb6674592214dc56eacc0808eec4}} 
+\#define {\bfseries C\+H\+A\+N\+GE}~0x03
+\item 
+\mbox{\Hypertarget{_arduino_8h_adfa748482b0985c7a61aa7fff66bb0a1}\label{_arduino_8h_adfa748482b0985c7a61aa7fff66bb0a1}} 
+\#define {\bfseries O\+N\+L\+OW}~0x04
+\item 
+\mbox{\Hypertarget{_arduino_8h_ab3c4ddd7e98c04a27ecae57854394979}\label{_arduino_8h_ab3c4ddd7e98c04a27ecae57854394979}} 
+\#define {\bfseries O\+N\+H\+I\+GH}~0x05
+\item 
+\mbox{\Hypertarget{_arduino_8h_abb974b83715668207c98dbedeb02c8f2}\label{_arduino_8h_abb974b83715668207c98dbedeb02c8f2}} 
+\#define {\bfseries O\+N\+L\+O\+W\+\_\+\+WE}~0x0C
+\item 
+\mbox{\Hypertarget{_arduino_8h_a912af0fc674c98826f497ddc9d80656d}\label{_arduino_8h_a912af0fc674c98826f497ddc9d80656d}} 
+\#define {\bfseries O\+N\+H\+I\+G\+H\+\_\+\+WE}~0x0D
+\item 
+\mbox{\Hypertarget{_arduino_8h_a3da44afeba217135a680a7477b5e3ce3}\label{_arduino_8h_a3da44afeba217135a680a7477b5e3ce3}} 
+\#define {\bfseries D\+E\+F\+A\+U\+LT}~1
+\item 
+\mbox{\Hypertarget{_arduino_8h_af3fe37c1cda80aa7202b5a3bb7557dc9}\label{_arduino_8h_af3fe37c1cda80aa7202b5a3bb7557dc9}} 
+\#define {\bfseries E\+X\+T\+E\+R\+N\+AL}~0
+\item 
+\mbox{\Hypertarget{_arduino_8h_abb4cac33acfd20b0534571301af89cd5}\label{_arduino_8h_abb4cac33acfd20b0534571301af89cd5}} 
+\#define {\bfseries \+\_\+\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}(a)~\#a
+\item 
+\mbox{\Hypertarget{_arduino_8h_a7df4a1319e5665c9040aa1838eef987c}\label{_arduino_8h_a7df4a1319e5665c9040aa1838eef987c}} 
+\#define {\bfseries constrain}(amt,  low,  high)~((amt)$<$(low)?(low)\+:((amt)$>$(high)?(high)\+:(amt)))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a7571dba2995b9cb57259345fe49d2f97}\label{_arduino_8h_a7571dba2995b9cb57259345fe49d2f97}} 
+\#define {\bfseries radians}(deg)~((deg)$\ast$D\+E\+G\+\_\+\+T\+O\+\_\+\+R\+AD)
+\item 
+\mbox{\Hypertarget{_arduino_8h_afe93c2c14da376a1621194c15c1de496}\label{_arduino_8h_afe93c2c14da376a1621194c15c1de496}} 
+\#define {\bfseries degrees}(rad)~((rad)$\ast$R\+A\+D\+\_\+\+T\+O\+\_\+\+D\+EG)
+\item 
+\mbox{\Hypertarget{_arduino_8h_ae7616788b30810a219d9cdee95904ba4}\label{_arduino_8h_ae7616788b30810a219d9cdee95904ba4}} 
+\#define {\bfseries sq}(x)~((x)$\ast$(x))
+\item 
+\mbox{\Hypertarget{_arduino_8h_aad5ebd34cb344c26ac87594f79b06b73}\label{_arduino_8h_aad5ebd34cb344c26ac87594f79b06b73}} 
+\#define {\bfseries sei}()
+\item 
+\mbox{\Hypertarget{_arduino_8h_a68c330e94fe121eba993e5a5973c3162}\label{_arduino_8h_a68c330e94fe121eba993e5a5973c3162}} 
+\#define {\bfseries cli}()
+\item 
+\mbox{\Hypertarget{_arduino_8h_aeab54da5ac84f3441a91cb982b2276bc}\label{_arduino_8h_aeab54da5ac84f3441a91cb982b2276bc}} 
+\#define {\bfseries interrupts}()~sei()
+\item 
+\mbox{\Hypertarget{_arduino_8h_a8dfd0b70aa3eb3c592d6de11711fce91}\label{_arduino_8h_a8dfd0b70aa3eb3c592d6de11711fce91}} 
+\#define {\bfseries no\+Interrupts}()~cli()
+\item 
+\mbox{\Hypertarget{_arduino_8h_ae6741cdb6d1d3f17299b9874ddc2c12e}\label{_arduino_8h_ae6741cdb6d1d3f17299b9874ddc2c12e}} 
+\#define {\bfseries clock\+Cycles\+Per\+Microsecond}()~( F\+\_\+\+C\+PU / 1000000L )
+\item 
+\mbox{\Hypertarget{_arduino_8h_a262d28355fa4b64b12743b5e93f7516b}\label{_arduino_8h_a262d28355fa4b64b12743b5e93f7516b}} 
+\#define {\bfseries clock\+Cycles\+To\+Microseconds}(a)~( (a) / clock\+Cycles\+Per\+Microsecond() )
+\item 
+\mbox{\Hypertarget{_arduino_8h_aa4a5bbc71d71ab25856c1366b6ca15bb}\label{_arduino_8h_aa4a5bbc71d71ab25856c1366b6ca15bb}} 
+\#define {\bfseries microseconds\+To\+Clock\+Cycles}(a)~( (a) $\ast$ clock\+Cycles\+Per\+Microsecond() )
+\item 
+\mbox{\Hypertarget{_arduino_8h_a57600234f6e26049357fbecfbdca9537}\label{_arduino_8h_a57600234f6e26049357fbecfbdca9537}} 
+\#define {\bfseries low\+Byte}(w)~((uint8\+\_\+t) ((w) \& 0xff))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a32fff07c58e569ce66ad409fe85c73bb}\label{_arduino_8h_a32fff07c58e569ce66ad409fe85c73bb}} 
+\#define {\bfseries high\+Byte}(w)~((uint8\+\_\+t) ((w) $>$$>$ 8))
+\item 
+\mbox{\Hypertarget{_arduino_8h_aff20d8c0a05ad3043afa2e4ad9ebe768}\label{_arduino_8h_aff20d8c0a05ad3043afa2e4ad9ebe768}} 
+\#define {\bfseries bit\+Read}(value,  bit)~(((value) $>$$>$ (bit)) \& 0x01)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a6a8195c0e930f86c6af03ba6af8b41dd}\label{_arduino_8h_a6a8195c0e930f86c6af03ba6af8b41dd}} 
+\#define {\bfseries bit\+Set}(value,  bit)~((value) $\vert$= (1UL $<$$<$ (bit)))
+\item 
+\mbox{\Hypertarget{_arduino_8h_abbe843c0521806a4ab2e7cffe44769e2}\label{_arduino_8h_abbe843c0521806a4ab2e7cffe44769e2}} 
+\#define {\bfseries bit\+Clear}(value,  bit)~((value) \&= $\sim$(1UL $<$$<$ (bit)))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a42c17f59f3f9a3112d01246760067a8e}\label{_arduino_8h_a42c17f59f3f9a3112d01246760067a8e}} 
+\#define {\bfseries bit\+Write}(value,  bit,  bitvalue)~(bitvalue ? bit\+Set(value, bit) \+: bit\+Clear(value, bit))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a46388d9db8422abfea56ae2323f7a77c}\label{_arduino_8h_a46388d9db8422abfea56ae2323f7a77c}} 
+\#define {\bfseries \+\_\+\+N\+OP}()~do \{ \+\_\+\+\_\+asm\+\_\+\+\_\+ volatile (\char`\"{}nop\char`\"{}); \} while (0)
+\item 
+\mbox{\Hypertarget{_arduino_8h_af419eea95c24741f969fbe9eb534404e}\label{_arduino_8h_af419eea95c24741f969fbe9eb534404e}} 
+\#define {\bfseries bit}(b)~(1UL $<$$<$ (b))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a7d425596273d3668a700af992b2c1965}\label{_arduino_8h_a7d425596273d3668a700af992b2c1965}} 
+\#define {\bfseries \+\_\+\+BV}(b)~(1UL $<$$<$ (b))
+\item 
+\mbox{\Hypertarget{_arduino_8h_af14986be4938976ac80645a592848219}\label{_arduino_8h_af14986be4938976ac80645a592848219}} 
+\#define {\bfseries digital\+Pin\+To\+Port}(pin)~(((pin)$>$31)?1\+:0)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a1090d8ff20466b5f8ec01d0a363994ef}\label{_arduino_8h_a1090d8ff20466b5f8ec01d0a363994ef}} 
+\#define {\bfseries digital\+Pin\+To\+Bit\+Mask}(pin)~(1UL $<$$<$ (((pin)$>$31)?((pin)-\/32)\+:(pin)))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a402b62edcffd9db3760332f6a935a843}\label{_arduino_8h_a402b62edcffd9db3760332f6a935a843}} 
+\#define {\bfseries digital\+Pin\+To\+Timer}(pin)~(0)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a220e52e727b3b726b3d5a2295d98ca9d}\label{_arduino_8h_a220e52e727b3b726b3d5a2295d98ca9d}} 
+\#define {\bfseries analog\+In\+Pin\+To\+Bit}(P)~(P)
+\item 
+\mbox{\Hypertarget{_arduino_8h_af5e61f8e219df23a5e2e7b2c71e97a2b}\label{_arduino_8h_af5e61f8e219df23a5e2e7b2c71e97a2b}} 
+\#define {\bfseries port\+Output\+Register}(port)~((volatile uint32\+\_\+t$\ast$)((port)?G\+P\+I\+O\+\_\+\+O\+U\+T1\+\_\+\+R\+E\+G\+:\+G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+R\+EG))
+\item 
+\mbox{\Hypertarget{_arduino_8h_ac97029491876efcd57b4d69575582f78}\label{_arduino_8h_ac97029491876efcd57b4d69575582f78}} 
+\#define {\bfseries port\+Input\+Register}(port)~((volatile uint32\+\_\+t$\ast$)((port)?G\+P\+I\+O\+\_\+\+I\+N1\+\_\+\+R\+E\+G\+:\+G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+R\+EG))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a480ff742d3385405b469affae857c4b2}\label{_arduino_8h_a480ff742d3385405b469affae857c4b2}} 
+\#define {\bfseries port\+Mode\+Register}(port)~((volatile uint32\+\_\+t$\ast$)((port)?G\+P\+I\+O\+\_\+\+E\+N\+A\+B\+L\+E1\+\_\+\+R\+E\+G\+:\+G\+P\+I\+O\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+R\+EG))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a62486102324ad2f7185279ce943e3152}\label{_arduino_8h_a62486102324ad2f7185279ce943e3152}} 
+\#define {\bfseries N\+O\+T\+\_\+\+A\+\_\+\+P\+IN}~-\/1
+\item 
+\mbox{\Hypertarget{_arduino_8h_a831aab476b523619dbd3c9f0a7e49330}\label{_arduino_8h_a831aab476b523619dbd3c9f0a7e49330}} 
+\#define {\bfseries N\+O\+T\+\_\+\+A\+\_\+\+P\+O\+RT}~-\/1
+\item 
+\mbox{\Hypertarget{_arduino_8h_ace73be9d32b9ad15d9120c47304266dc}\label{_arduino_8h_ace73be9d32b9ad15d9120c47304266dc}} 
+\#define {\bfseries N\+O\+T\+\_\+\+A\+N\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~-\/1
+\item 
+\mbox{\Hypertarget{_arduino_8h_a77d75bdd0dd8486dc8a52e742f1dc8a0}\label{_arduino_8h_a77d75bdd0dd8486dc8a52e742f1dc8a0}} 
+\#define {\bfseries N\+O\+T\+\_\+\+O\+N\+\_\+\+T\+I\+M\+ER}~0
+\item 
+\mbox{\Hypertarget{_arduino_8h_ad8a68cbc825e50630b93047279a32718}\label{_arduino_8h_ad8a68cbc825e50630b93047279a32718}} 
+\#define {\bfseries \+\_\+min}(a,  b)~((a)$<$(b)?(a)\+:(b))
+\item 
+\mbox{\Hypertarget{_arduino_8h_a7742fa23cad0b81a56daae0c5ad63c8b}\label{_arduino_8h_a7742fa23cad0b81a56daae0c5ad63c8b}} 
+\#define {\bfseries \+\_\+max}(a,  b)~((a)$>$(b)?(a)\+:(b))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_arduino_8h_af29b166bf5fea7f0bbc07f7014a8c6b5}\label{_arduino_8h_af29b166bf5fea7f0bbc07f7014a8c6b5}} 
+typedef bool {\bfseries boolean}
+\item 
+\mbox{\Hypertarget{_arduino_8h_ab8ef12fab634c171394422d0ee8baf94}\label{_arduino_8h_ab8ef12fab634c171394422d0ee8baf94}} 
+typedef uint8\+\_\+t {\bfseries byte}
+\item 
+\mbox{\Hypertarget{_arduino_8h_abad51e07ab6d26bec9f1f786c8d65bcd}\label{_arduino_8h_abad51e07ab6d26bec9f1f786c8d65bcd}} 
+typedef unsigned int {\bfseries word}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___sistema_ga4fc01d736fe50cf5b977f755b675f11d}{setup}} (void)
+\begin{DoxyCompactList}\small\item\em inicializacao do zapper V9.\+0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___sistema_gafe461d27b9c48d5921c00d521181f12f}{loop}} (void)
+\begin{DoxyCompactList}\small\item\em Loops this object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_arduino_8h_a6b9ada8a1c83c6203b3163ad2ace9dcf}\label{_arduino_8h_a6b9ada8a1c83c6203b3163ad2ace9dcf}} 
+long {\bfseries random} (long, long)
+\item 
+\mbox{\Hypertarget{_arduino_8h_af432c343a7e3b9940f019123f6df4e16}\label{_arduino_8h_af432c343a7e3b9940f019123f6df4e16}} 
+void {\bfseries random\+Seed} (unsigned long)
+\item 
+\mbox{\Hypertarget{_arduino_8h_aa1ac552b77454a59c3ebc05a2d7cfee7}\label{_arduino_8h_aa1ac552b77454a59c3ebc05a2d7cfee7}} 
+long {\bfseries map} (long, long, long, long, long)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a2858154e2009b0e6e616f313177762bc}\label{_arduino_8h_a2858154e2009b0e6e616f313177762bc}} 
+void {\bfseries init} (void)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a2c97027bd05bc09accd09dcd4ada2642}\label{_arduino_8h_a2c97027bd05bc09accd09dcd4ada2642}} 
+void {\bfseries init\+Variant} (void)
+\item 
+\mbox{\Hypertarget{_arduino_8h_adbd6b0146655b5aa462fec4a2a28103b}\label{_arduino_8h_adbd6b0146655b5aa462fec4a2a28103b}} 
+void {\bfseries init\+Arduino} (void)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a1ed2ad1a8590a020e15ba2b485428415}\label{_arduino_8h_a1ed2ad1a8590a020e15ba2b485428415}} 
+unsigned long {\bfseries pulse\+In} (uint8\+\_\+t pin, uint8\+\_\+t state, unsigned long timeout)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a5c7c2a8ca6d056f09adb9adb1cd31516}\label{_arduino_8h_a5c7c2a8ca6d056f09adb9adb1cd31516}} 
+unsigned long {\bfseries pulse\+In\+Long} (uint8\+\_\+t pin, uint8\+\_\+t state, unsigned long timeout)
+\item 
+\mbox{\Hypertarget{_arduino_8h_a1efecc975119046403adc60af645015d}\label{_arduino_8h_a1efecc975119046403adc60af645015d}} 
+uint8\+\_\+t {\bfseries shift\+In} (uint8\+\_\+t data\+Pin, uint8\+\_\+t clock\+Pin, uint8\+\_\+t bit\+Order)
+\item 
+\mbox{\Hypertarget{_arduino_8h_ac44afc7b9d1ec5feb1179b2e3454690a}\label{_arduino_8h_ac44afc7b9d1ec5feb1179b2e3454690a}} 
+void {\bfseries shift\+Out} (uint8\+\_\+t data\+Pin, uint8\+\_\+t clock\+Pin, uint8\+\_\+t bit\+Order, uint8\+\_\+t val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+este é o header \char`\"{}\+Arduino\char`\"{} alterado pela Espressif para funcionar com o E\+S\+P32 e Free\+R\+T\+OS
+
+\begin{DoxyAuthor}{Author}
+espressif -\/ mltf 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2019/10/02 
+\end{DoxyDate}

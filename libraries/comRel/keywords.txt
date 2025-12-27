@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For comRel
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+comRel	KEYWORD1
+WifiRelog	KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+iniciaWIFI	KEYWORD2
+conectaWIFI	KEYWORD2
+desconectaWIFI	KEYWORD2
+pegaDataHoraNTP	KEYWORD2
+AconfigTime	KEYWORD2
+iniciaRelogioRTCSys	KEYWORD2
+atualizaRTC	KEYWORD2
+atualizaRTCEpoch	KEYWORD2
+iniciaRelogioSys	KEYWORD2
+AgetLocalTime	KEYWORD2
+fazTimeStrNTP	KEYWORD2
+fazTimeStrRTC	KEYWORD2
+#######################################
+# Instances (KEYWORD2)
+#######################################
+#######################################
+# Constants (LITERAL1)
+#######################################
+setentaAnos LITERAL1
+epoch2000 LITERAL1
+epoch2000gmt LITERAL1
+epoch2000_TZ LITERAL1
