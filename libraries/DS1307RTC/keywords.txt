@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map For DS1307RTC
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+DS1307RTC	KEYWORD1
+relogio		KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+get	KEYWORD2
+set	KEYWORD2
+read	KEYWORD2
+write	KEYWORD2
+chipPresent	KEYWORD2
+isRunning	KEYWORD2
+setCalibration	KEYWORD2
+getCalibration	KEYWORD2
+breakTime	KEYWORD2
+makeTime	KEYWORD2
+#######################################
+# Instances (KEYWORD2)
+#######################################
+#######################################
+# Constants (LITERAL1)
+#######################################
