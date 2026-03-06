@@ -1,3 +1,5 @@
+
+
 /*
 comRel.cpp
 Biblioteca de rotinas de comunicação Wifi e do relógio
@@ -8,8 +10,28 @@ mario
 
 #include "comRel.h"
 
+/*****************************************************//**
+ * @fn	comRel::comRel()
+ *
+ * @brief	Default constructor
+ *
+ * @date	18/12/2019
+ *********************************************************/
 comRel::comRel() {}
 
+/*****************************************************//**
+ * @fn	bool comRel::iniciaWIFI(String ssid, String password, bool DEBUGANDO)
+ *
+ * @brief	Inicia WiFi
+ *
+ * @date	18/12/2019
+ *
+ * @param 	ssid	 	The SSID.
+ * @param 	password 	The password.
+ * @param 	DEBUGANDO	True to debugando.
+ *
+ * @returns	True if it succeeds, false if it fails.
+ *********************************************************/
 bool comRel::iniciaWIFI(String ssid, String password, bool DEBUGANDO) {
 	
 	bool stsWIFI = false;
@@ -35,6 +57,19 @@ bool comRel::iniciaWIFI(String ssid, String password, bool DEBUGANDO) {
 	}
 }
 
+/*****************************************************//**
+ * @fn	bool comRel::conectaWIFI(String ssid, String password, bool DEBUGANDO)
+ *
+ * @brief	Conecta WiFi
+ *
+ * @date	18/12/2019
+ *
+ * @param 	ssid	 	The SSID.
+ * @param 	password 	The password.
+ * @param 	DEBUGANDO	True to debugando.
+ *
+ * @returns	True if it succeeds, false if it fails.
+ *********************************************************/
 bool comRel::conectaWIFI(String ssid, String password, bool DEBUGANDO) {
 
 	int espera = 0;
@@ -62,18 +97,36 @@ bool comRel::conectaWIFI(String ssid, String password, bool DEBUGANDO) {
 	password_char = NULL;
 }
 
+/*****************************************************//**
+ * @fn	void comRel::desconectaWIFI(bool DEBUGANDO)
+ *
+ * @brief	Desconecta WiFi
+ *
+ * @date	18/12/2019
+ *
+ * @param 	DEBUGANDO	True to debugando.
+ *********************************************************/
 void comRel::desconectaWIFI(bool DEBUGANDO) {			//desconecta WiFi
 	WiFi.disconnect(true);
 	WiFi.mode(WIFI_OFF);
 	if (DEBUGANDO) Serial.println(" DESCONECTADO");	//para debug
 }
 
-//================================================
-//conecta a um servidor NTP, lê data-hora (ref 1900)
-// seta time zone (fuso horário)
-//e atualiza relogio do sistema, 
-//e depois lê horário do sistema (no debug)
-//
+/*****************************************************//**
+ * @fn	bool comRel::pegaDataHoraNTP(bool DEBUGANDO)
+ *
+ * @brief	================================================
+ * 			conecta a um servidor NTP, lê data-hora (ref 1900)
+ * 			 seta time zone (fuso horário)
+ * 			e atualiza relogio do sistema, e depois lê horário do
+ * 			sistema (no debug)
+ *
+ * @date	18/12/2019
+ *
+ * @param 	DEBUGANDO	True to debugando.
+ *
+ * @returns	True if it succeeds, false if it fails.
+ *********************************************************/
 bool comRel::pegaDataHoraNTP(bool DEBUGANDO) {
 
 	//INICIA E PEGA HORA-DATA formato NTP - 1900
@@ -95,10 +148,20 @@ bool comRel::pegaDataHoraNTP(bool DEBUGANDO) {
 	}
 }
 
-//=================================================================
-//define os servidores NTP (relógio global), conecta na rede
-// e lê horário global
-//
+/*****************************************************//**
+ * @fn	void comRel::AconfigTime(const char* server1, const char* server2, const char* server3)
+ *
+ * @brief	=================================================================
+ * 			define os servidores NTP (relógio global), conecta na
+ * 			rede
+ * 			 e lê horário global
+ *
+ * @date	18/12/2019
+ *
+ * @param 	server1	The first server.
+ * @param 	server2	The second server.
+ * @param 	server3	The third server.
+ *********************************************************/
 void comRel::AconfigTime(const char* server1, const char* server2, const char* server3){
 	
 	if (sntp_enabled()) {
@@ -111,9 +174,20 @@ void comRel::AconfigTime(const char* server1, const char* server2, const char* s
 	sntp_init();
 }
 
-//==============================================================
-// lê data-hora do sistema (ref 1900 - NTP)
-//
+/*****************************************************//**
+ * @fn	bool comRel::AgetLocalTime(tm* datahora, uint32_t ms, bool DEBUGANDO)
+ *
+ * @brief	==============================================================
+ * 			 lê data-hora do sistema (ref 1900 - NTP)
+ *
+ * @date	18/12/2019
+ *
+ * @param [in,out]	datahora 	If non-null, the datahora.
+ * @param 		  	ms		 	The milliseconds.
+ * @param 		  	DEBUGANDO	True to debugando.
+ *
+ * @returns	True if it succeeds, false if it fails.
+ *********************************************************/
 bool comRel::AgetLocalTime(tm* datahora, uint32_t ms, bool DEBUGANDO) {
 
 	uint32_t count = ms / 10;
@@ -138,6 +212,18 @@ bool comRel::AgetLocalTime(tm* datahora, uint32_t ms, bool DEBUGANDO) {
 }
 
 //==========================================================
+
+/*****************************************************//**
+ * @fn	time_t comRel::fazTimeStamp(bool DEBUGANDO)
+ *
+ * @brief	Faz time stamp
+ *
+ * @date	18/12/2019
+ *
+ * @param 	DEBUGANDO	True to debugando.
+ *
+ * @returns	A time_t.
+ *********************************************************/
 time_t comRel::fazTimeStamp(bool DEBUGANDO) {
 	bool flgLocal;
 	tm datalocal;
@@ -146,9 +232,17 @@ time_t comRel::fazTimeStamp(bool DEBUGANDO) {
 
 }
 
-//====================================
-//inicia relogio do RTC e do Sistema
-//
+/*****************************************************//**
+ * @fn	void comRel::iniciaRelogioRTCSys(bool okWiFi, bool DEBUGANDO)
+ *
+ * @brief	==================================== inicia relogio do
+ * 			RTC e do Sistema
+ *
+ * @date	18/12/2019
+ *
+ * @param 	okWiFi   	True to ok WiFi.
+ * @param 	DEBUGANDO	True to debugando.
+ *********************************************************/
 void comRel::iniciaRelogioRTCSys(bool okWiFi, bool DEBUGANDO) {
 
 	tmElements_t registros;
@@ -194,10 +288,20 @@ void comRel::iniciaRelogioRTCSys(bool okWiFi, bool DEBUGANDO) {
 	}
 }
 
-//==============================================
-//inicia manualmente relogio do sistema e 
-//seta time zone.
-//
+/*****************************************************//**
+ * @fn	bool comRel::iniciaRelogioSys(time_t epochData, tm* datahora, bool DEBUGANDO)
+ *
+ * @brief	============================================== inicia
+ * 			manualmente relogio do sistema e seta time zone.
+ *
+ * @date	18/12/2019
+ *
+ * @param 		  	epochData	Information describing the epoch.
+ * @param [in,out]	datahora 	If non-null, the datahora.
+ * @param 		  	DEBUGANDO	True to debugando.
+ *
+ * @returns	True if it succeeds, false if it fails.
+ *********************************************************/
 bool comRel::iniciaRelogioSys(time_t epochData, tm* datahora, bool DEBUGANDO) {
 	
 	time_t now;
@@ -251,6 +355,18 @@ bool comRel::iniciaRelogioSys(time_t epochData, tm* datahora, bool DEBUGANDO) {
 }
 
 //===============================================
+
+/*****************************************************//**
+ * @fn	bool comRel::atualizaRTC(bool DEBUGANDO)
+ *
+ * @brief	Atualiza RTC
+ *
+ * @date	18/12/2019
+ *
+ * @param 	DEBUGANDO	True to debugando.
+ *
+ * @returns	True if it succeeds, false if it fails.
+ *********************************************************/
 bool comRel::atualizaRTC(bool DEBUGANDO) {
 
 	if (DEBUGANDO) _dbgMostraDados(" VAI atualizar DS1307 ", 0);
@@ -284,6 +400,18 @@ bool comRel::atualizaRTC(bool DEBUGANDO) {
 }
 
 //==============================================
+
+/*****************************************************//**
+ * @fn	bool comRel::atualizaRTCEpoch(bool DEBUGANDO)
+ *
+ * @brief	Atualiza RTC epoch
+ *
+ * @date	18/12/2019
+ *
+ * @param 	DEBUGANDO	True to debugando.
+ *
+ * @returns	True if it succeeds, false if it fails.
+ *********************************************************/
 bool comRel::atualizaRTCEpoch(bool DEBUGANDO) {
 	_dbgMostraDados(" VAI atualizar DS1307-Epoch2000gmt ", 0);
 	relogio.begin();
@@ -300,6 +428,17 @@ bool comRel::atualizaRTCEpoch(bool DEBUGANDO) {
 
 
 //===============================================
+
+/*****************************************************//**
+ * @fn	void comRel::fazTimeStrNextion(tm* datahora, char* resultado)
+ *
+ * @brief	Faz time string nextion
+ *
+ * @date	18/12/2019
+ *
+ * @param [in,out]	datahora 	If non-null, the datahora.
+ * @param [in,out]	resultado	If non-null, the resultado.
+ *********************************************************/
 void comRel::fazTimeStrNextion(tm* datahora, char* resultado) {
 
 	sprintf(resultado, "%4d-%02d-%02d %02d:%02d",
@@ -312,6 +451,17 @@ void comRel::fazTimeStrNextion(tm* datahora, char* resultado) {
 }
 
 //===============================================
+
+/*****************************************************//**
+ * @fn	void comRel::fazTimeStrNTP(tm* datahora, char* resultado)
+ *
+ * @brief	Faz time string ntp
+ *
+ * @date	18/12/2019
+ *
+ * @param [in,out]	datahora 	If non-null, the datahora.
+ * @param [in,out]	resultado	If non-null, the resultado.
+ *********************************************************/
 void comRel::fazTimeStrNTP(tm* datahora, char* resultado) {
 
 	sprintf(resultado, "%4d-%02d-%02d %3s %02d:%02d:%02d",
@@ -326,6 +476,17 @@ void comRel::fazTimeStrNTP(tm* datahora, char* resultado) {
 }
 
 //===============================================
+
+/*****************************************************//**
+ * @fn	void comRel::fazTimeStrRTC(tmElements_t *tmreg, char* resultado)
+ *
+ * @brief	Faz time string RTC
+ *
+ * @date	18/12/2019
+ *
+ * @param [in,out]	tmreg	 	If non-null, the tmreg.
+ * @param [in,out]	resultado	If non-null, the resultado.
+ *********************************************************/
 void comRel::fazTimeStrRTC(tmElements_t *tmreg, char* resultado) {
 
 	sprintf(resultado, "%4d-%02d-%02d  %3s %02d:%02d:%02d",
@@ -340,6 +501,17 @@ void comRel::fazTimeStrRTC(tmElements_t *tmreg, char* resultado) {
 }
 
 //========= private
+
+/*****************************************************//**
+ * @fn	void comRel::_dbgMostraDados(String mensagem, int valor)
+ *
+ * @brief	Debug mostra dados
+ *
+ * @date	18/12/2019
+ *
+ * @param 	mensagem	The mensagem.
+ * @param 	valor   	The valor.
+ *********************************************************/
 void comRel::_dbgMostraDados(String mensagem, int valor) {
 	Serial.print(mensagem);
 	Serial.print(": ");
